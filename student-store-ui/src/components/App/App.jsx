@@ -19,12 +19,11 @@ export default function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/products/:productId" element={<ProductDetail/>} />
             <Route path="*" element={<NotFound/>} />
+            <Route path="navbar" element={<Navbar/>} />
           </Routes>
           {/* ------------------ */}
 
-          <Navbar />
-          <Sidebar />
-          <Home />
+ 
         </main>
       </BrowserRouter>
     </div>
