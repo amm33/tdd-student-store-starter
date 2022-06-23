@@ -15,6 +15,21 @@ import { useEffect } from "react";
 import axios from "axios";
 
 export default function App() {
+  //getting the data
+  const url = `https://codepath-store-api.herokuapp.com/store`;
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    axios
+      .get(url)
+      .then((response) => {
+        setProducts(response.data);
+        console.log(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  //---------------------------
   return (
     <div className="app">
       <BrowserRouter>
