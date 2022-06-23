@@ -27,47 +27,48 @@ export default function App() {
   //getting the data
   const url = `https://codepath-store-api.herokuapp.com/store`;
 
-  useEffect(() => {
-    axios
-      .get(url)
-      .then((response) => {
-        products = setProducts(response.data);
-        console.log(products);
-      })
-      .catch((err) => {
-        error = setError(err);
-        console.log(error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get(url)
+  //     .then((response) => {
+  //       products = setProducts(response.data);
+  //       console.log(products);
+  //     })
+  //     .catch((err) => {
+  //       setError(err);
+  //       console.log(err);
+  //     });
+  // }, []);
 
   //pulling id from the route --check slides
 
   //------------work on these-----------//
   //event handlers to be passed as props to Home and Product Detail
-  handleOnToggle = () => {
-    //toggle open/close state of the sidebar
-  };
 
-  handleAddItemToCart = (productId) => {
-    //add product to shopping cart and make quantity 1
-    //if produce is already there, increase quantity by 1
-    //add price of product to the total in shopping cart
-  };
+  // handleOnToggle = () => {
+  //   //toggle open/close state of the sidebar
+  // };
 
-  handleRemoveItemFromCart = (productId) => {
-    //decrease quantity in shopping cart by 1 - only if it exists
-    //if product does not exist, nothing should happen
-    //if new quantity is 0, it should be removed from the shopping cart
-  };
+  // handleAddItemToCart = (productId) => {
+  //   //add product to shopping cart and make quantity 1
+  //   //if produce is already there, increase quantity by 1
+  //   //add price of product to the total in shopping cart
+  // };
 
-  handleOnCheckoutFormChange = (name, value) => {
-    //update checkout form
-  };
+  // handleRemoveItemFromCart = (productId) => {
+  //   //decrease quantity in shopping cart by 1 - only if it exists
+  //   //if product does not exist, nothing should happen
+  //   //if new quantity is 0, it should be removed from the shopping cart
+  // };
 
-  handleOnSubmit = () => {
-    //look at the readme file
-    //should submit user order to API
-  };
+  // handleOnCheckoutFormChange = (name, value) => {
+  //   //update checkout form
+  // };
+
+  // handleOnSubmit = () => {
+  //   //look at the readme file
+  //   //should submit user order to API
+  // };
 
   //---------------------------
   return (
