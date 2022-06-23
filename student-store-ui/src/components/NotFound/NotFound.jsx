@@ -1,9 +1,16 @@
-import React from 'react'
-import Navbar from "../Navbar/Navbar"
-import Sidebar from "../Sidebar/Sidebar"
+import React from "react";
+import "./NotFound.css";
+import Navbar from "../Navbar/Navbar";
+import Sidebar from "../Sidebar/Sidebar";
 
 const NotFound = () => {
-  return( <div>NotFound</div>)
-}
+  return (
+    <div class="NotFound">
+      <p>NotFound</p>
+      <Navbar />
+      <Sidebar />
+    </div>
+  );
+};
 
 export default NotFound;
