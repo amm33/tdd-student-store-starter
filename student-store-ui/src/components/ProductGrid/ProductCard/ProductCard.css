@@ -108,3 +108,32 @@
 
   transform: translate(50px) translateY(-35px);
 } */
+/* div {
+  height: auto;
+  /* width: 1000px; */
+/* margin: 0 auto; */
+/* } */
+/* .product-grid .product-card .media img {
+  height: 250px;
+  width: 248px;
+  display: flex;
+} */
+/* .product-card .media img {
+  max-width: 800px;
+} */
+
+.product-card img {
+  width: 250px;
+  height: 250px;
+  display: flex;
+}
+
+.product-card {
+  display: flex;
+  height: 380px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #e4e4e4;
+  /* box-shadow: 0.2px 4px 5px black; */
+}

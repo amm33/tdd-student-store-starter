@@ -168,7 +168,7 @@ The following specifications were met on the Express backend and the React front
   - `handleRemoveItemToCart` - handler function
   - `showDescription` - boolean
 - [x] Should render the `name` of the product inside an element with the `className` of `product-name`
-- [ ] Should render the `price` of the product inside an element with the `className` of `product-price`. The price should formatted so that it starts with a `$`, and has **at least one** integer digit, along with **exactly two** decimal digits. Examples - `$22.99`, `$860.20`, and `$0.50`
+- [x] Should render the `price` of the product inside an element with the `className` of `product-price`. The price should formatted so that it starts with a `$`, and has **at least one** integer digit, along with **exactly two** decimal digits. Examples - `$22.99`, `$860.20`, and `$0.50`
 - [x] If the `showDescription` prop is set to `true`, it should render the `description` of the product inside an element with the `className` of `product-description`.
 - [x] Should render an `img` element for the product:
   - [x] The `img` element should have a `src` attribute to set to the `image` property of the `product` prop.

@@ -12,7 +12,7 @@ export default function ProductCard({
 }) {
   return (
     <div className="product-card">
-      <p>Product Card</p>
+      {/* <p>Product Card</p> */}
 
       <div className="media">
         <Link to={"/products/" + product.id}>
@@ -22,7 +22,7 @@ export default function ProductCard({
 
       <div className="product-info">
         <p className="product-name">{product.name}</p>
-        <p className="product-price">${product.price}</p>
+        <p className="product-price">${product.price.toFixed(2)}</p>
       </div>
 
       {/* description */}
