@@ -1,5 +1,12 @@
 import * as React from "react";
 import "./Sidebar.css";
+// import ShoppingCart from "./ShoppingCart/ShoppingCart";
+import {
+  FiHome,
+  FiLogOut,
+  FiArrowLeftCircle,
+  FiArrowRightCircle,
+} from "react-icons/fi";
 
 export default function Sidebar({
   isOpen,
@@ -8,12 +15,18 @@ export default function Sidebar({
   checkoutFrom,
   handleOnCheckoutFormChange,
   handleOnSubmitCheckoutForm,
-  handleOnToggle,
+  handleOnToggle = () => {},
 }) {
   return (
-    <section className="sidebar">
-      <p>Sidebar</p>
-      <button className="toggle-button" onClick={handleOnToggle}></button>
+    <section className={isOpen ? "sidebar" : "sidebar-closed"}>
+      <div className="sidebar">
+        <p>Sidebar</p>
+        <button className="toggle-button" onClick={handleOnToggle}></button>
+      </div>
+
+      <div className="sidebar-closed" onClick={handleOnToggle}>
+        {isOpen ? <FiArrowRightCircle /> : <FiArrowLeftCircle />}
+      </div>
     </section>
   );
 }

@@ -1,0 +1,11 @@
+.ContactUs {
+  background: #2c4047;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 300px;
+}

@@ -22,6 +22,9 @@ export default function ProductCard({
 
       <div className="product-info">
         <p className="product-name">{product.name}</p>
+        <div className="stars"></div>
+        {/* <button className="add" onClick=""></button>
+        <button className="remove" onClick=""></button> */}
         <p className="product-price">${product.price.toFixed(2)}</p>
       </div>
 

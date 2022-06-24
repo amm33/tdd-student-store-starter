@@ -137,3 +137,9 @@
   border: solid 1px #e4e4e4;
   /* box-shadow: 0.2px 4px 5px black; */
 }
+
+.stars svg {
+  height: 20px;
+  width: 20px;
+  background-color: #e5a800;
+}

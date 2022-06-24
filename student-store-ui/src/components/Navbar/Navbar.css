@@ -4,13 +4,13 @@
   /* font-weight: bold; */
   width: 100%;
   max-width: 100vw;
-  background: var(--dark-blue);
-  color: var(--pure-white);
+  background: #2c4047;
+  color: white;
   height: 70px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 var(--side-padding);
+  padding: 0;
 }
 
 nav.navbar {

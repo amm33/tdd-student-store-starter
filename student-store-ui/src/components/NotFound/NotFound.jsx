@@ -5,10 +5,10 @@ import Sidebar from "../Sidebar/Sidebar";
 
 const NotFound = () => {
   return (
-    <div class="NotFound">
-      <p>NotFound</p>
+    <div className="NotFound">
       <Navbar />
       <Sidebar />
+      <p>NotFound</p>
     </div>
   );
 };

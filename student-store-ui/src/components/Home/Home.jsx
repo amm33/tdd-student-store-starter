@@ -5,6 +5,8 @@ import Sidebar from "../Sidebar/Sidebar";
 import Logo from "../Navbar/Logo/Logo";
 import Hero from "../Home/Hero/Hero";
 import ProductGrid from "../ProductGrid/ProductGrid";
+import AboutUs from "../AboutUs/AboutUs";
+import ContactUs from "../ContactUs/ContactUs";
 
 export default function Home(props) {
   return (
@@ -19,6 +21,8 @@ export default function Home(props) {
         handleRemoveItemFromCart={props.handleRemoveItemFromCart}
       />
       <p>Home</p>
+      <AboutUs />
+      <ContactUs />
     </div>
   );
 }

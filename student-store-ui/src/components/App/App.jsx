@@ -4,6 +4,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import Home from "../Home/Home";
 import ProductDetail from "../ProductDetail/ProductDetail";
 import NotFound from "../NotFound/NotFound";
+
 import AboutUs from "../AboutUs/AboutUs";
 import ContactUs from "../ContactUs/ContactUs";
 import BuyNow from "../BuyNow/BuyNow";
@@ -26,7 +27,7 @@ export default function App() {
 
   //getting the data
   const url = `https://codepath-store-api.herokuapp.com/store`;
-  const { id } = useParams();
+  // const { id } = useParams();
 
   useEffect(async () => {
     await axios
@@ -36,6 +37,7 @@ export default function App() {
         let responseD = response.data;
         setProducts(responseD.products);
         console.log("Response.data " + response.data);
+        console.log(responseD);
         // console.log(products);
       })
       .catch((err) => {
