@@ -7,7 +7,7 @@ export default function ProductCard({
   productId,
   quantity,
   handleAddItemToCart,
-  handleRemoveItemForCart,
+  handleRemoveItemFromCart,
   showDescription,
 }) {
   return (
@@ -25,10 +25,15 @@ export default function ProductCard({
         <p className="product-price">${product.price}</p>
       </div>
 
+      {/* description */}
       <div>
         {showDescription ? (
           <p className="product-description">{product.description}</p>
         ) : null}
+      </div>
+
+      <div>
+        <span className="product-quantity">{product.quantity}</span>
       </div>
     </div>
   );

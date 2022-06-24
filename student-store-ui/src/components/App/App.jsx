@@ -32,8 +32,10 @@ export default function App() {
     await axios
       .get(url)
       .then((response) => {
-        setProducts(response.data);
-        console.log(response.data);
+        console.log("Response " + response);
+        let responseD = response.data;
+        setProducts(responseD.products);
+        console.log("Response.data " + response.data);
         // console.log(products);
       })
       .catch((err) => {
