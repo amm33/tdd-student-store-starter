@@ -1,10 +1,21 @@
-import * as React from "react"
-import "./ProductGrid.css"
+import * as React from "react";
+import "./ProductGrid.css";
+import ProductCard from "./ProductCard/ProductCard";
 
-export default function ProductGrid() {
+export default function ProductGrid(props) {
   return (
-    <section className="productgrid">
-      <p>Product Grid</p>
-    </section>
-  )
+    <div className="product-grid">
+      {/* mapping through the products */}
+      {props.products.map((product, i) => (
+        <ProductCard
+          product={product}
+          productId={product.id}
+          showDescription={false}
+          key={i}
+          handleAddItemToCart={props.handleAddItemToCart}
+          handleRemoveItemToCart={props.handleRemoveItemToCart}
+        ></ProductCard>
+      ))}
+    </div>
+  );
 }

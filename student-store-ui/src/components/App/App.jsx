@@ -26,28 +26,35 @@ export default function App() {
 
   //getting the data
   const url = `https://codepath-store-api.herokuapp.com/store`;
+  const { id } = useParams();
 
-  // useEffect(() => {
-  //   axios
-  //     .get(url)
-  //     .then((response) => {
-  //       products = setProducts(response.data);
-  //       console.log(products);
-  //     })
-  //     .catch((err) => {
-  //       setError(err);
-  //       console.log(err);
-  //     });
-  // }, []);
+  useEffect(async () => {
+    await axios
+      .get(url)
+      .then((response) => {
+        setProducts(response.data);
+        console.log(response.data);
+        // console.log(products);
+      })
+      .catch((err) => {
+        setError(err);
+        // console.log(err);
+      });
+  }, []);
 
   //pulling id from the route --check slides
 
   //------------work on these-----------//
   //event handlers to be passed as props to Home and Product Detail
 
-  // handleOnToggle = () => {
-  //   //toggle open/close state of the sidebar
-  // };
+  const handleOnToggle = () => {
+    //toggle open/close state of the sidebar
+    if (isOpen) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
+  };
 
   // handleAddItemToCart = (productId) => {
   //   //add product to shopping cart and make quantity 1
@@ -78,7 +85,7 @@ export default function App() {
           {/* YOUR CODE HERE! */}
           {/* -----the routes---- */}
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home products={products} />} />
             <Route path="/products/:productId" element={<ProductDetail />} />
             <Route path="*" element={<NotFound />} />
             <Route path="navbar" element={<Navbar />} />
