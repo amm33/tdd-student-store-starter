@@ -11,7 +11,7 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 #### Core Features
 
 - [ ] Displays the following sections: header, banner, search, product grid, about, contact, and footer.
-- [ ] On initial page load, display the products at the [GET /store endpoint](https://codepath-store-api.herokuapp.com/store).
+- [x] On initial page load, display the products at the [GET /store endpoint](https://codepath-store-api.herokuapp.com/store).
 - [ ] User can click on the categories (Clothing, food, etc) to filter the product grid by type.
 - [ ] User can search for products.
 - [ ] User can click on a product in the grid to view additional product details. Navigation is via a React Router.
@@ -37,7 +37,7 @@ The following specifications were met on the Express backend and the React front
 
 **App.jsx**
 
-- [ ] The core App component that contains the routes for the app and does the initial data fetching
+- [x] The core App component that contains the routes for the app and does the initial data fetching
 - [x] Renders a `BrowserRouter` component that contains a `Routes` component with the following routes:
   - [x] `/` - Should render the `Home.jsx` component
   - [x] `/products/:productId` - should render the `ProductDetail` component
@@ -103,7 +103,7 @@ The following specifications were met on the Express backend and the React front
 **Logo.jsx**
 
 - [x] Should render JSX that is wrapped by a `div` element with a `className` of `logo`
-- [ ] Should use the `Link` component from `react-router-dom` to link to the home route (`/`) when clicked
+- [x] Should use the `Link` component from `react-router-dom` to link to the home route (`/`) when clicked
 
 **Home.jsx**
 
@@ -118,8 +118,8 @@ The following specifications were met on the Express backend and the React front
 **Hero.jsx**
 
 - [x] Should render JSX that is wrapped by a `div` element with a `className` of `hero`
-- [ ] Should display an intro message inside an element with the `className` of `intro`. That message should contain the text `"Welcome!"` somewhere within it.
-- [ ] Should render a hero image inside an `img` tag with the `className` of `hero-img`.
+- [x] Should display an intro message inside an element with the `className` of `intro`. That message should contain the text `"Welcome!"` somewhere within it.
+- [x] Should render a hero image inside an `img` tag with the `className` of `hero-img`.
 
 **ProductGrid.jsx**
 

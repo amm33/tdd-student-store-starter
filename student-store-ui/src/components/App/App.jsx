@@ -87,7 +87,16 @@ export default function App() {
           {/* YOUR CODE HERE! */}
           {/* -----the routes---- */}
           <Routes>
-            <Route path="/" element={<Home products={products} />} />
+            <Route
+              path="/"
+              element={
+                <Home
+                  products={products}
+                  handleOnToggle={handleOnToggle}
+                  isOpen={isOpen}
+                />
+              }
+            />
             <Route path="/products/:productId" element={<ProductDetail />} />
             <Route path="*" element={<NotFound />} />
             <Route path="navbar" element={<Navbar />} />

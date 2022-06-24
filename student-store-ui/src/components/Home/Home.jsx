@@ -12,7 +12,7 @@ export default function Home(props) {
       {/* <Logo /> */}
       <Navbar />
       <Hero />
-      <Sidebar />
+      <Sidebar handleOnToggle={props.handleOnToggle} />
       <ProductGrid
         products={props.products}
         handleAddItemToCart={props.handleAddItemToCart}
