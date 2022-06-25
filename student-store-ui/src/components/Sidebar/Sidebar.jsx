@@ -55,6 +55,7 @@
 import * as React from "react";
 import "./Sidebar.css";
 import CheckoutForm from "../Navbar/CheckoutForm/CheckoutForm";
+// import ShoppingCart from "./ShoppingCart/ShoppingCart";
 
 // export default function Sidebar({
 //   isOpen,

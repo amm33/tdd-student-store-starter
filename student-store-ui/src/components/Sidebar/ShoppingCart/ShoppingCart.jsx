@@ -3,8 +3,8 @@ import "./ShoppingCart.css";
 import { useState } from "react";
 
 export default function ShoppingCart({ isOpen, products, shoppingCart }) {
-  var taxes = subtotal * 0.0875;
-  var total = subtotal + taxes;
+  // var taxes = subtotal * 0.0875;
+  // var total = subtotal + taxes;
 
   // shoppingCart.forEach((product) => {
   //   total += products.find(
@@ -50,7 +50,42 @@ export default function ShoppingCart({ isOpen, products, shoppingCart }) {
           </div>
 
           {/* going through each item in the cart  */}
-          {shoppingCart.map()}
+          {shoppingCart.map((item, i) => (
+            <div className="product-row" key={i}>
+              <span className="flex-2 cart-product-name">
+                {products.find((elem) => elem.id === item.itemId).name}
+              </span>
+              <span className="center cart-product-price">
+                ${products.find((elem) => elem.id === item.itemId).price}
+              </span>
+              <span className="center cart-product-subtotal">
+                $
+                {item.quantity *
+                  products.find((elem) => elem.id === item.itemId).price}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <div className="receipt">
+          <div className="receipt-subtotal">
+            <span className="label">Subtotal</span>
+            <span></span>
+            <span></span>
+            <span className="center subtotal">{"$" + subtotal}</span>
+          </div>
+          <div className="receipt-taxes">
+            <span className="label">Taxes and Fees</span>
+            <span></span>
+            <span></span>
+            <span className="center">{"$" + taxes}</span>
+          </div>
+          <div className="receipt-total">
+            <span className="label">Total</span>
+            <span></span>
+            <span></span>
+            <span className="center total-price">{"$" + totPrice}</span>
+          </div>
         </div>
       </div>
     </div>
