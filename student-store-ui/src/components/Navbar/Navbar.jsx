@@ -8,6 +8,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <span>
+        {/* <Sidebar /> */}
         <Logo />
         <Socials />
       </span>

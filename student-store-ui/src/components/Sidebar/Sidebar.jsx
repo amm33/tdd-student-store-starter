@@ -5,6 +5,7 @@ import CheckoutForm from "../Navbar/CheckoutForm/CheckoutForm";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import MenuIcon from "@mui/icons-material/Menu";
+
 // import {
 //   FiHome,
 //   FiLogOut,
@@ -35,13 +36,14 @@ export default function Sidebar({
           </button>
 
           <div className="content">
-            <CheckoutForm
+            {/* <CheckoutForm
+              products={products}
               handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
               handleOnCheckoutFormChange={handleOnCheckoutFormChange}
               isOpen={isOpen}
               shoppingCart={shoppingCart}
               checkoutForm={checkoutForm}
-            />
+            /> */}
           </div>
         </div>
         {/* <ShoppingCart

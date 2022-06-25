@@ -108,9 +108,11 @@ export default function App() {
         <main>
           {/* YOUR CODE HERE! */}
           {/* -----the routes---- */}
+          {/* <Navbar />
           <SubNavbar setFilter={setFilter} filter={filter} />
           <SearchBar search={search} setSearch={setSearch} />
-          <Sidebar isOpen={isOpen} handleOnToggle={handleOnToggle} />
+          // <Sidebar isOpen={isOpen} handleOnToggle={handleOnToggle} /> */}
+          {/* <Home /> */}
           <Routes>
             <Route
               path="/"
@@ -138,7 +140,7 @@ export default function App() {
   );
 }
 
-//search bar
+// search bar
 const SearchBar = ({ search, setSearch }) => {
   return (
     <div className="search">
@@ -175,23 +177,23 @@ const SearchBar = ({ search, setSearch }) => {
 //   );
 // };
 
-const SubNavbar = ({ filter, setFilter }) => {
-  const categories = ["All Categories", "Food", "Accessories", "Tech"];
-  return (
-    <div className={`sub-navbar`}>
-      {categories.map((item, i) => {
-        return (
-          <button
-            key={i}
-            id={`${filter === item ? "selected-filter" : ""}`}
-            onClick={() => {
-              setFilter(item);
-            }}
-          >
-            {item}
-          </button>
-        );
-      })}
-    </div>
-  );
-};
+// const SubNavbar = ({ filter, setFilter }) => {
+//   const categories = ["All Categories", "Food", "Accessories", "Tech"];
+//   return (
+//     <div className={`sub-navbar`}>
+//       {categories.map((item, i) => {
+//         return (
+//           <button
+//             key={i}
+//             id={`${filter === item ? "selected-filter" : ""}`}
+//             onClick={() => {
+//               setFilter(item);
+//             }}
+//           >
+//             {item}
+//           </button>
+//         );
+//       })}
+//     </div>
+//   );
+// };

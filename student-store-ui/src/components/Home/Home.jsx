@@ -11,10 +11,9 @@ import ContactUs from "../ContactUs/ContactUs";
 export default function Home(props) {
   return (
     <div className="home">
-      {/* <Logo /> */}
       <Navbar />
       <Hero />
-      {/* <Sidebar handleOnToggle={props.handleOnToggle} /> */}
+      <Sidebar handleOnToggle={props.handleOnToggle} />
       <ProductGrid
         search={props.search}
         filter={props.filter}
@@ -22,7 +21,7 @@ export default function Home(props) {
         handleAddItemToCart={props.handleAddItemToCart}
         handleRemoveItemFromCart={props.handleRemoveItemFromCart}
       />
-      {/* <p>Home</p> */}
+      <p>Home</p>
       <AboutUs />
       <ContactUs />
     </div>
