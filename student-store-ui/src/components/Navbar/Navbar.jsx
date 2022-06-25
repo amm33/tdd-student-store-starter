@@ -18,14 +18,14 @@ export default function Navbar() {
       </span>
 
       <span>
-        <Link to="/aboutus">About Us</Link>
+        <Link to="/aboutUs">About Us</Link>
       </span>
 
       <span>
-        <Link to="/contactus">Contact Us</Link>
+        <Link to="/ContactUs">Contact Us</Link>
       </span>
       <span>
-        <Link to="/buynow">Buy Now</Link>
+        <Link to="/product-grid">Buy Now</Link>
       </span>
     </nav>
   );

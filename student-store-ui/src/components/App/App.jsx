@@ -110,8 +110,8 @@ export default function App() {
           {/* -----the routes---- */}
           {/* <Navbar />
           <SubNavbar setFilter={setFilter} filter={filter} />
-          <SearchBar search={search} setSearch={setSearch} />
-          // <Sidebar isOpen={isOpen} handleOnToggle={handleOnToggle} /> */}
+          <SearchBar search={search} setSearch={setSearch} /> */}
+          <Sidebar isOpen={isOpen} handleOnToggle={handleOnToggle} />
           {/* <Home /> */}
           <Routes>
             <Route
@@ -130,6 +130,8 @@ export default function App() {
             />
             <Route path="/products/:productId" element={<ProductDetail />} />
             <Route path="*" element={<NotFound />} />
+            {/* <Route path="/aboutUs" element={<AboutUs />} /> */}
+            <Route path="/ContactUs" element={<ContactUs />} />
             {/* <Route path="navbar" element={<Navbar />} />
             <Route path="sidebar" element={<Sidebar />} /> */}
           </Routes>

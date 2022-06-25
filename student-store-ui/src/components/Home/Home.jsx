@@ -15,7 +15,11 @@ export default function Home(props) {
     <div className="home">
       <Navbar />
       <Hero />
-      <Sidebar handleOnToggle={props.handleOnToggle} />
+      {/* <Sidebar
+        handleOnToggle={props.handleOnToggle}
+        isOpen={isOpen}
+        shoppingCart={shoppingCart}
+      /> */}
       {/* <SubNavbar /> */}
       <ProductGrid
         search={props.search}
