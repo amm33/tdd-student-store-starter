@@ -26,11 +26,7 @@ export default function Sidebar({
     <div className="sideBar">
       <section className={isOpen ? "sidebar" : "sidebar-closed"}>
         <div className="buttonDiv">
-          <button
-            href="javascript:void(0)"
-            className="toggle-button"
-            onClick={handleOnToggle}
-          >
+          <button className="toggle-button" onClick={handleOnToggle}>
             &times;
             {/* <MenuIcon /> */}
           </button>

@@ -60,43 +60,43 @@ export default function App() {
     console.log("Open");
   };
 
-  // handleAddItemToCart = (productId) => {
-  //   //add product to shopping cart and make quantity 1
-  //   //if produce is already there, increase quantity by 1
-  //   //add price of product to the total in shopping cart
-  //   // var aCart = [];
-  //   for (var i = 0; i < shoppingCart.length; i++) {
-  //     if (shoppingCart[i].itemId === productId) {
-  //       shoppingCart[i].quantity++;
-  //       setShoppingCart([...shoppingCart]);
-  //       return;
-  //     }
-  //     var item = { itemId: productId, quantity: 1 };
-  //     setShoppingCart([item, ...shoppingCart]);
-  //   }
-  // };
+  const handleAddItemToCart = (productId) => {
+    //add product to shopping cart and make quantity 1
+    //if produce is already there, increase quantity by 1
+    //add price of product to the total in shopping cart
+    // var aCart = [];
+    for (var i = 0; i < shoppingCart.length; i++) {
+      if (shoppingCart[i].itemId === productId) {
+        shoppingCart[i].quantity++;
+        setShoppingCart([...shoppingCart]);
+        return;
+      }
+      var item = { itemId: productId, quantity: 1 };
+      setShoppingCart([item, ...shoppingCart]);
+    }
+  };
 
-  // handleRemoveItemFromCart = (productId) => {
-  //   //decrease quantity in shopping cart by 1 - only if it exists
-  //   //if product does not exist, nothing should happen
-  //   //if new quantity is 0, it should be removed from the shopping cart
-  //   for (let i = 0; i < shoppingCart.length; i++) {
-  //     if (shoppingCart[i].itemId === productId) {
-  //       if (shoppingCart[i].quantity == 1) {
-  //         shoppingCart.splice(i, 1);
-  //       } else {
-  //         shoppingCart[i].quantity--;
-  //       }
-  //       setShoppingCart([...shoppingCart]);
-  //     }
-  //   }
-  // };
+  const handleRemoveItemFromCart = (productId) => {
+    //decrease quantity in shopping cart by 1 - only if it exists
+    //if product does not exist, nothing should happen
+    //if new quantity is 0, it should be removed from the shopping cart
+    for (let i = 0; i < shoppingCart.length; i++) {
+      if (shoppingCart[i].itemId === productId) {
+        if (shoppingCart[i].quantity == 1) {
+          shoppingCart.splice(i, 1);
+        } else {
+          shoppingCart[i].quantity--;
+        }
+        setShoppingCart([...shoppingCart]);
+      }
+    }
+  };
 
-  // handleOnCheckoutFormChange = (name, value) => {
+  //const handleOnCheckoutFormChange = (name, value) => {
   //   //update checkout form
   // };
 
-  // handleOnSubmit = () => {
+  //const handleOnSubmit = () => {
   //   //look at the readme file
   //   //should submit user order to API
   // };
