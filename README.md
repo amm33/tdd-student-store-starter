@@ -67,7 +67,7 @@ The following specifications were met on the Express backend and the React front
     - [x] The **`handleOnToggle`** function. When called...
       - [ ] It should toggle the open/closed state of the `Sidebar`.
     - [ ] The **`handleAddItemToCart`** function. When called...
-      - [ ] It should accept a single argument - `productId`
+      - [x] It should accept a single argument - `productId`
       - [ ] It should add that product to the `shoppingCart` if it doesn't exist, and set its quantity to `1`.
       - [ ] If it does exist, it should increase the quantity by `1`.
       - [ ] It should add the price of the product to the total price of the `shoppingCart`.
@@ -107,13 +107,13 @@ The following specifications were met on the Express backend and the React front
 
 **Home.jsx**
 
-- [ ] Should render JSX that is wrapped by a `div` element with a `className` of `home`
-- [ ] Should accept **at least** the following props:
+- [x] Should render JSX that is wrapped by a `div` element with a `className` of `home`
+- [x] Should accept **at least** the following props:
   - `products` - an array of product objects
   - `handleAddItemToCart` - handler function defined in the `App.jsx` component
   - `handleRemoveItemToCart` - handler function defined in the `App.jsx` component
-- [ ] Should render the `Hero` component
-- [ ] Should render the `ProductGrid` component
+- [x] Should render the `Hero` component
+- [x] Should render the `ProductGrid` component
 
 **Hero.jsx**
 
@@ -136,11 +136,11 @@ The following specifications were met on the Express backend and the React front
 - [ ] Should accept **at least** the following props:
   - `handleAddItemToCart` - handler function defined in the `App.jsx` component
   - `handleRemoveItemToCart` - handler function defined in the `App.jsx` component
-- [ ] Should define **at least** a `product` state variable and updater
-- [ ] It should leverage the `useParams` hook from `react-router-dom` to extract the `productId` param from the url.
+- [x] Should define **at least** a `product` state variable and updater
+- [x] It should leverage the `useParams` hook from `react-router-dom` to extract the `productId` param from the url.
 - [ ] When the component is mounted to the screen...
-  - [ ] It should make a `GET` request to the `/store/:productId` endpoint with the `axios.get` method.
-  - [ ] The `:productId` part of the request should be replaced with the `productId` pulled from the url.
+  - [x] It should make a `GET` request to the `/store/:productId` endpoint with the `axios.get` method.
+  - [x] The `:productId` part of the request should be replaced with the `productId` pulled from the url.
   - [ ] When the initial request is loading, it should render an `h1` element with the `className` of `loading` and contain the text `"Loading..."`
   - [ ] It should store the `product` received by the request in state and then render the `ProductView` component.
   - [ ] If no `product` is found with that `id`, it should render the `NotFound` component
@@ -154,7 +154,7 @@ The following specifications were met on the Express backend and the React front
   - `quantity` - the quantity for this product found in the `shoppingCart`
   - `handleAddItemToCart` - handler function
   - `handleRemoveItemToCart` - handler function
-- [ ] It should display an `h1` element with the `className` of `product-id` that contains the text: `Product #` followed by the `productId` prop
+- [x] It should display an `h1` element with the `className` of `product-id` that contains the text: `Product #` followed by the `productId` prop
 - [ ] It should render a `ProductCard` component and pass it the props it needs. It should also set the `showDescription` prop to `true` for this product card.
 
 **ProductCard.jsx**
@@ -176,8 +176,8 @@ The following specifications were met on the Express backend and the React front
     - [x] The `Link` element should have a `to` prop so that when the `img` element is clicked on, it should navigate to the product detail route for that product using its `id` attribute. For example, a product with an `id` of `4` should create a `Link` with its `to` prop set to `/products/4`.
     - [x] The `Link` that wraps the `img` element should be nested somewhere inside an element with the `className` of `media`.
 - [ ] Should render two `buttons` elements...
-  - [x] One button with a `className` of `add`. When clicked, it should call the `handleAddItemToCart` function with the `id` of the `product` as its only argument.
-  - [x] One button with a `className` of `remove`. When clicked, it should call the `handleRemoveItemFromCart` function with the `id` of the `product` as its only argument.
+  - [ ] One button with a `className` of `add`. When clicked, it should call the `handleAddItemToCart` function with the `id` of the `product` as its only argument.
+  - [ ] One button with a `className` of `remove`. When clicked, it should call the `handleRemoveItemFromCart` function with the `id` of the `product` as its only argument.
 - [ ] Should display the current quantity of items that the user has selected in their shopping cart. The quantity should be rendered inside an element with the `className` of `product-quantity`. If none of that particular item have been added to the shopping cart, it should render nothing there.
 
 **Sidebar.jsx**
@@ -197,7 +197,7 @@ The following specifications were met on the Express backend and the React front
 
 **ShoppingCart.jsx**
 
-- [ ] Should render JSX that is wrapped by a `div` element with the `className` of `shopping-cart`
+- [x] Should render JSX that is wrapped by a `div` element with the `className` of `shopping-cart`
 - [ ] Should accept **at least** the following props (and probably a few more):
   - `isOpen` - boolean representing the open/closed state of the Sidebar
   - `products` - the array of products fetched from the API

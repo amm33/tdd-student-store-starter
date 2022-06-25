@@ -14,13 +14,15 @@ export default function Home(props) {
       {/* <Logo /> */}
       <Navbar />
       <Hero />
-      <Sidebar handleOnToggle={props.handleOnToggle} />
+      {/* <Sidebar handleOnToggle={props.handleOnToggle} /> */}
       <ProductGrid
+        search={props.search}
+        filter={props.filter}
         products={props.products}
         handleAddItemToCart={props.handleAddItemToCart}
         handleRemoveItemFromCart={props.handleRemoveItemFromCart}
       />
-      <p>Home</p>
+      {/* <p>Home</p> */}
       <AboutUs />
       <ContactUs />
     </div>

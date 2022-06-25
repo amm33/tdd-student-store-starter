@@ -6,3 +6,11 @@
   display: flex;
   flex-direction: column;
 }
+
+.sub-navbar {
+  margin-top: 100px;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+}

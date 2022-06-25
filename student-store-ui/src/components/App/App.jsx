@@ -25,6 +25,9 @@ export default function App() {
   const [shoppingCart, setShoppingCart] = useState([]); //store state for users shopping cart (what they want and the quantity)
   const [checkoutForm, setCheckoutForm] = useState(null); //users info which will be sent to the API at checkout
 
+  const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState("");
+
   //getting the data
   const url = `https://codepath-store-api.herokuapp.com/store`;
   // const { id } = useParams();
@@ -53,23 +56,40 @@ export default function App() {
 
   const handleOnToggle = () => {
     //toggle open/close state of the sidebar
-    if (isOpen) {
-      setIsOpen(false);
-    } else {
-      setIsOpen(true);
-    }
+    setIsOpen(!isOpen);
+    console.log("Open");
   };
 
   // handleAddItemToCart = (productId) => {
   //   //add product to shopping cart and make quantity 1
   //   //if produce is already there, increase quantity by 1
   //   //add price of product to the total in shopping cart
+  //   // var aCart = [];
+  //   for (var i = 0; i < shoppingCart.length; i++) {
+  //     if (shoppingCart[i].itemId === productId) {
+  //       shoppingCart[i].quantity++;
+  //       setShoppingCart([...shoppingCart]);
+  //       return;
+  //     }
+  //     var item = { itemId: productId, quantity: 1 };
+  //     setShoppingCart([item, ...shoppingCart]);
+  //   }
   // };
 
   // handleRemoveItemFromCart = (productId) => {
   //   //decrease quantity in shopping cart by 1 - only if it exists
   //   //if product does not exist, nothing should happen
   //   //if new quantity is 0, it should be removed from the shopping cart
+  //   for (let i = 0; i < shoppingCart.length; i++) {
+  //     if (shoppingCart[i].itemId === productId) {
+  //       if (shoppingCart[i].quantity == 1) {
+  //         shoppingCart.splice(i, 1);
+  //       } else {
+  //         shoppingCart[i].quantity--;
+  //       }
+  //       setShoppingCart([...shoppingCart]);
+  //     }
+  //   }
   // };
 
   // handleOnCheckoutFormChange = (name, value) => {
@@ -88,6 +108,9 @@ export default function App() {
         <main>
           {/* YOUR CODE HERE! */}
           {/* -----the routes---- */}
+          <SubNavbar setFilter={setFilter} filter={filter} />
+          <SearchBar search={search} setSearch={setSearch} />
+          <Sidebar isOpen={isOpen} handleOnToggle={handleOnToggle} />
           <Routes>
             <Route
               path="/"
@@ -96,13 +119,17 @@ export default function App() {
                   products={products}
                   handleOnToggle={handleOnToggle}
                   isOpen={isOpen}
+                  search={search}
+                  setSearch={setSearch}
+                  filter={filter}
+                  setFilter={setFilter}
                 />
               }
             />
             <Route path="/products/:productId" element={<ProductDetail />} />
             <Route path="*" element={<NotFound />} />
-            <Route path="navbar" element={<Navbar />} />
-            <Route path="sidebar" element={<Sidebar />} />
+            {/* <Route path="navbar" element={<Navbar />} />
+            <Route path="sidebar" element={<Sidebar />} /> */}
           </Routes>
           {/* ------------------ */}
         </main>
@@ -110,3 +137,61 @@ export default function App() {
     </div>
   );
 }
+
+//search bar
+const SearchBar = ({ search, setSearch }) => {
+  return (
+    <div className="search">
+      <input
+        placeholder="Search"
+        value={search}
+        onChange={(e) => {
+          setSearch(e.target.value);
+        }}
+      />
+    </div>
+  );
+};
+
+//filter
+// const FilterCategories = ({ filter, setFilter }) => {
+//   const categories = ["All Categories", "Food", "Accessories", "Tech"];
+//   return (
+//     <div className="categories">
+//       {categories.map((category, i) => {
+//         return (
+//           <button
+//             key={i}
+//             id={`${filter === item ? "selected-filter" : ""}`}
+//             onClick={() => {
+//               setFilter(item);
+//             }}
+//           >
+//             {category}
+//           </button>
+//         );
+//       })}
+//     </div>
+//   );
+// };
+
+const SubNavbar = ({ filter, setFilter }) => {
+  const categories = ["All Categories", "Food", "Accessories", "Tech"];
+  return (
+    <div className={`sub-navbar`}>
+      {categories.map((item, i) => {
+        return (
+          <button
+            key={i}
+            id={`${filter === item ? "selected-filter" : ""}`}
+            onClick={() => {
+              setFilter(item);
+            }}
+          >
+            {item}
+          </button>
+        );
+      })}
+    </div>
+  );
+};

@@ -19,8 +19,7 @@ export default function Sidebar({
 }) {
   return (
     <section className={isOpen ? "sidebar" : "sidebar-closed"}>
-      <div className="sidebar">
-        <p>Sidebar</p>
+      <div className="buttonDiv">
         <button className="toggle-button" onClick={handleOnToggle}></button>
       </div>
 
