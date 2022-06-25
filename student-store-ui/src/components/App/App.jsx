@@ -25,8 +25,8 @@ export default function App() {
   const [shoppingCart, setShoppingCart] = useState([]); //store state for users shopping cart (what they want and the quantity)
   const [checkoutForm, setCheckoutForm] = useState(null); //users info which will be sent to the API at checkout
 
-  const [search, setSearch] = useState("");
-  const [filter, setFilter] = useState("");
+  // const [search, setSearch] = useState("");
+  // const [filter, setFilter] = useState("");
 
   //getting the data
   const url = `https://codepath-store-api.herokuapp.com/store`;
@@ -121,10 +121,10 @@ export default function App() {
                   products={products}
                   handleOnToggle={handleOnToggle}
                   isOpen={isOpen}
-                  search={search}
-                  setSearch={setSearch}
-                  filter={filter}
-                  setFilter={setFilter}
+                  // search={search}
+                  // setSearch={setSearch}
+                  // filter={filter}
+                  // setFilter={setFilter}
                 />
               }
             />
@@ -141,19 +141,19 @@ export default function App() {
 }
 
 // search bar
-const SearchBar = ({ search, setSearch }) => {
-  return (
-    <div className="search">
-      <input
-        placeholder="Search"
-        value={search}
-        onChange={(e) => {
-          setSearch(e.target.value);
-        }}
-      />
-    </div>
-  );
-};
+// const SearchBar = ({ search, setSearch }) => {
+//   return (
+//     <div className="search">
+//       <input
+//         placeholder="Search"
+//         value={search}
+//         onChange={(e) => {
+//           setSearch(e.target.value);
+//         }}
+//       />
+//     </div>
+//   );
+// };
 
 //filter
 // const FilterCategories = ({ filter, setFilter }) => {

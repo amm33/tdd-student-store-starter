@@ -7,6 +7,8 @@ import Hero from "../Home/Hero/Hero";
 import ProductGrid from "../ProductGrid/ProductGrid";
 import AboutUs from "../AboutUs/AboutUs";
 import ContactUs from "../ContactUs/ContactUs";
+import Footer from "../Footer/Footer";
+// import SubNavbar from "./SubNavar/SubNavbar";
 
 export default function Home(props) {
   return (
@@ -14,6 +16,7 @@ export default function Home(props) {
       <Navbar />
       <Hero />
       <Sidebar handleOnToggle={props.handleOnToggle} />
+      {/* <SubNavbar /> */}
       <ProductGrid
         search={props.search}
         filter={props.filter}
@@ -24,6 +27,7 @@ export default function Home(props) {
       <p>Home</p>
       <AboutUs />
       <ContactUs />
+      <Footer />
     </div>
   );
 }
