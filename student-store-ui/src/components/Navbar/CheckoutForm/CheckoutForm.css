@@ -92,3 +92,15 @@
 .checkout-form.closed {
   display: none;
 }
+
+label {
+  color: white;
+}
+
+.success-info {
+  color: white;
+}
+
+.success {
+  color: white;
+}

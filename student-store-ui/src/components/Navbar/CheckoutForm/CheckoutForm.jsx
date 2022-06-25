@@ -64,8 +64,8 @@ export default function CheckoutForm(props) {
           <p>
             {" "}
             A confirmation email will be sent to you to confirm receipt of this
-            order. Once confirmed, the order will be delivered to your
-            residence.
+            order. Once confirmed, the order will be delivered to your dorm
+            room.
           </p>
         </div>
       </div>

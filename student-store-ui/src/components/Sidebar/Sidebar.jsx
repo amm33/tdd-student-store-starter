@@ -108,13 +108,38 @@ export default function Sidebar(props) {
           >
             <i className="material-icons md-48">arrow_forward</i>
           </button>
-          <button
-            className={props.isOpen ? "closedIcon open" : "closedIcon closed"}
-          >
-            <i className="material-icons md-48" onClick={props.handleOnToggle}>
-              add_shopping_cart
-            </i>
-          </button>
+          <div className="cart-icons">
+            <button
+              className={props.isOpen ? "closedIcon open" : "closedIcon closed"}
+            >
+              <i
+                className="material-icons md-48"
+                onClick={props.handleOnToggle}
+              >
+                add_shopping_cart
+              </i>
+            </button>
+            <button
+              className={props.isOpen ? "closedIcon open" : "closedIcon closed"}
+            >
+              <i
+                className="material-icons md-48"
+                onClick={props.handleOnToggle}
+              >
+                monetization_on
+              </i>
+            </button>
+            <button
+              className={props.isOpen ? "closedIcon open" : "closedIcon closed"}
+            >
+              <i
+                className="material-icons md-48"
+                onClick={props.handleOnToggle}
+              >
+                fact_check
+              </i>
+            </button>
+          </div>
         </div>
         {/* <ShoppingCart
           isOpen={props.isOpen}
