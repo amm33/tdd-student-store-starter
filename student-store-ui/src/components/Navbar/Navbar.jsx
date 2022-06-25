@@ -9,6 +9,7 @@ export default function Navbar() {
     <nav className="navbar">
       <span>
         <Logo />
+        <Socials />
       </span>
 
       <span>
@@ -20,11 +21,29 @@ export default function Navbar() {
       </span>
 
       <span>
-        <Link to="">Contact Us</Link>
+        <Link to="/contactus">Contact Us</Link>
       </span>
       <span>
-        <Link to="">Buy Now</Link>
+        <Link to="/buynow">Buy Now</Link>
       </span>
     </nav>
   );
 }
+
+const Socials = () => {
+  return (
+    <div className="Socials">
+      <ul>
+        <li>
+          <a href="https://twitter.com/codepath?lang=en">Twitter</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/codepathorg/?hl=en">Instagram</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/codepath.org/">Facebook</a>
+        </li>
+      </ul>
+    </div>
+  );
+};
