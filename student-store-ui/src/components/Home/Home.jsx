@@ -188,6 +188,7 @@ export default function Home(props) {
           </div>
         </div>
       </nav>
+      <h3>Best Selling Products</h3>
       <ProductGrid
         search={props.search}
         filter={props.filter}

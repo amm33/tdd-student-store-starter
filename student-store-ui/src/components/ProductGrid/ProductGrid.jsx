@@ -7,6 +7,7 @@ export default function ProductGrid(props) {
   return (
     <div className="product-grid">
       {/* mapping through the products and create product card for each*/}
+
       {props.products
         ? props.products.map((product, i) => {
             return (

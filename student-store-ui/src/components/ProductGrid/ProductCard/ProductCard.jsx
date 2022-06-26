@@ -79,6 +79,13 @@ export default function ProductCard({
       <div className="product-info">
         <div className="main-info">
           <p className="product-name">{product.name}</p>
+          <div className="stars">
+            <i className="material-icons">star</i>
+            <i className="material-icons">star</i>
+            <i className="material-icons">star</i>
+            <i className="material-icons">star</i>
+            <i className="material-icons">star_half</i>
+          </div>
           <p className="product-price"> {"$" + product.price.toFixed(2)}</p>
         </div>
         <div className="actions">
