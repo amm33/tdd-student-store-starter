@@ -3,14 +3,37 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Logo from "./Logo/Logo";
 import Sidebar from "../Sidebar/Sidebar";
+import { SocialIcon } from "react-social-icons";
 
 export default function Navbar() {
   return (
     <nav className="navbar">
       <span>
         {/* <Sidebar /> */}
-        <Logo />
-        <Socials />
+        <div className="logo">
+          <Logo />
+        </div>
+        <div className="socials">
+          <SocialIcon
+            url="https://twitter.com/codepath?lang=en"
+            bgColor="#2c4047"
+            fgColor="#fff"
+            style={{ height: 35, width: 35 }}
+          />
+          <SocialIcon
+            url="https://www.instagram.com/codepathorg/?hl=en"
+            bgColor="#2c4047"
+            fgColor="#fff"
+            style={{ height: 35, width: 35 }}
+          />
+          <SocialIcon
+            url="https://www.facebook.com/codepath.org/"
+            bgColor="#2c4047"
+            fgColor="#fff"
+            style={{ height: 35, width: 35 }}
+          />
+        </div>
+        {/* <Socials /> */}
       </span>
 
       <span>

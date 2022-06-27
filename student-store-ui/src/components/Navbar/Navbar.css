@@ -15,7 +15,7 @@
 
 nav.navbar {
   background-color: #2c4047;
-  padding: 0 px 40 px;
+  /* padding: 0 px 40 px; */
 }
 
 * {
@@ -79,6 +79,15 @@ a {
   cursor: pointer;
 }
 
-.Socials {
+a:hover {
+  text-shadow: 0 0 5px #ff0000;
+}
+.socials {
   cursor: pointer;
+  transform: translateX(70px);
+  margin-bottom: 30px;
+}
+
+.logo {
+  transform: translateX(-100px);
 }
