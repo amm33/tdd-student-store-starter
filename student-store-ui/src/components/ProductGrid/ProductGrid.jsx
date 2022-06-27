@@ -1,7 +1,6 @@
 import * as React from "react";
 import "./ProductGrid.css";
 import ProductCard from "./ProductCard/ProductCard";
-// import "../ProductCard/ProductCard";
 
 export default function ProductGrid(props) {
   return (
@@ -24,7 +23,7 @@ export default function ProductGrid(props) {
                     : null
                 }
                 handleAddItemToCart={props.handleAddItemToCart}
-                handleRemoveItemToCart={props.handleRemoveItemToCart}
+                handleRemoveItemFromCart={props.handleRemoveItemFromCart}
                 shoppingCart={props.shoppingCart}
               ></ProductCard>
             );

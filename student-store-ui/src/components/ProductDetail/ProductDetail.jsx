@@ -129,7 +129,7 @@ export function ProductDetail({
 }) {
   const [product, setProduct] = useState();
   const params = useParams();
-  console.log("id=", params.productId);
+  console.log("id =", params.productId);
 
   useEffect(() => {
     axios

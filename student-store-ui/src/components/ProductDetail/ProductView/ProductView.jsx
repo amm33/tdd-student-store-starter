@@ -6,8 +6,8 @@ export function ProductView({
   product,
   productId,
   quantity,
-  addItems,
-  removeItems,
+  // addItems,
+  // removeItems,
   shoppingCart,
   handleAddItemToCart,
   handleRemoveItemFromCart,
@@ -20,8 +20,8 @@ export function ProductView({
         product={product}
         productId={productId}
         quantity={quantity}
-        addItems={addItems}
-        removeItems={removeItems}
+        // addItems={addItems}
+        // removeItems={removeItems}
         allowLink={false}
         showDescription={true}
         shoppingCart={shoppingCart}
