@@ -18,6 +18,7 @@ export default function CheckoutForm(props) {
             className="checkout-form-input"
             type="text"
             placeholder="Student Name"
+            // value="checkoutForm.name"
           ></input>
         </div>
       </div>
@@ -29,6 +30,7 @@ export default function CheckoutForm(props) {
             className="checkout-form-input"
             type="email"
             placeholder="student@codepath.org"
+            // value="checkoutForm.email"
           ></input>
         </div>
       </div>

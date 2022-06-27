@@ -16,8 +16,16 @@ export default function ProductGrid(props) {
                 productId={product.id}
                 showDescription={false}
                 key={i}
+                quantity={
+                  props.shoppingCart.find((item) => item.itemId === product.id)
+                    ? props.shoppingCart.find(
+                        (item) => item.itemId === product.id
+                      ).quantity
+                    : null
+                }
                 handleAddItemToCart={props.handleAddItemToCart}
                 handleRemoveItemToCart={props.handleRemoveItemToCart}
+                shoppingCart={props.shoppingCart}
               ></ProductCard>
             );
           })

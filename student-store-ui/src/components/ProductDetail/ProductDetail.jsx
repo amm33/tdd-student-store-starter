@@ -118,6 +118,14 @@ export function ProductDetail({
   addItems,
   removeItems,
   shoppingCart,
+  handleOnCheckoutFormChange,
+  handleOnSubmitCheckoutForm,
+  checkoutForm,
+  products,
+  subtotal,
+  handleAddItemToCart,
+  handleRemoveItemFromCart,
+  showDescription,
 }) {
   const [product, setProduct] = useState();
   const params = useParams();
@@ -133,15 +141,32 @@ export function ProductDetail({
 
   return (
     <div className="product-detail">
-      <Sidebar isOpen={isOpen} handleOnToggle={handleOnToggle} />
+      <Sidebar
+        isOpen={isOpen}
+        handleOnToggle={handleOnToggle}
+        handleOnCheckoutFormChange={handleOnCheckoutFormChange}
+        handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
+        checkoutForm={checkoutForm}
+        shoppingCart={shoppingCart}
+        products={products}
+        subtotal={subtotal}
+      />
       <Navbar />
       {!product ? null : (
         <ProductView
           product={product}
           productId={params.productId}
+          // quantity={
+          //   shoppingCart.find((item) => item.itemId === product.id)
+          //     ? shoppingCart.find((item) => item.itemId === product.id).quantity
+          //     : null
+          // }
           addItems={addItems}
           removeItems={removeItems}
           shoppingCart={shoppingCart}
+          showDescription={showDescription}
+          handleAddItemToCart={handleAddItemToCart}
+          handleRemoveItemFromCart={handleRemoveItemFromCart}
         />
       )}
     </div>

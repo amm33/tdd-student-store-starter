@@ -24,6 +24,7 @@ export default function App() {
   const [isOpen, setIsOpen] = useState(null); //represents whether the sidebar is open or not
   const [shoppingCart, setShoppingCart] = useState([]); //store state for users shopping cart (what they want and the quantity)
   const [checkoutForm, setCheckoutForm] = useState(null); //users info which will be sent to the API at checkout
+  const [subtotal, setSubtotal] = useState(null);
 
   // const [search, setSearch] = useState("");
   // const [filter, setFilter] = useState("");
@@ -49,8 +50,6 @@ export default function App() {
       });
   }, []);
 
-  //pulling id from the route --check slides
-
   //------------work on these-----------//
   //event handlers to be passed as props to Home and Product Detail
 
@@ -60,46 +59,97 @@ export default function App() {
     console.log("Open");
   };
 
+  // const handleAddItemToCart = (productId) => {
+  //add product to shopping cart and make quantity 1
+  //if produce is already there, increase quantity by 1
+  //add price of product to the total in shopping cart
+  // var aCart = [];
+  //   for (var i = 0; i < shoppingCart.length; i++) {
+  //     if (shoppingCart[i].itemId === productId) {
+  //       shoppingCart[i].quantity++;
+  //       setShoppingCart([...shoppingCart]);
+  //       return;
+  //     }
+  //     var item = { itemId: productId, quantity: 1 };
+  //     setShoppingCart([item, ...shoppingCart]);
+  //   }
+  // };
+
   const handleAddItemToCart = (productId) => {
-    //add product to shopping cart and make quantity 1
-    //if produce is already there, increase quantity by 1
-    //add price of product to the total in shopping cart
-    // var aCart = [];
+    var newItem;
+    var newCart = [];
+
     for (var i = 0; i < shoppingCart.length; i++) {
       if (shoppingCart[i].itemId === productId) {
         shoppingCart[i].quantity++;
         setShoppingCart([...shoppingCart]);
+        var tempPrice =
+          products.find((item) => item.id === productId).price + subtotal;
+        setSubtotal(tempPrice);
+
         return;
       }
-      var item = { itemId: productId, quantity: 1 };
-      setShoppingCart([item, ...shoppingCart]);
     }
+    newItem = {
+      itemId: productId,
+      quantity: 1,
+    };
+
+    setShoppingCart([newItem, ...shoppingCart]);
+    var tempPrice =
+      products.find((item) => item.id === productId).price + subtotal;
+    setSubtotal(tempPrice);
   };
 
+  // const handleRemoveItemFromCart = (productId) => {
+  //decrease quantity in shopping cart by 1 - only if it exists
+  //if product does not exist, nothing should happen
+  //if new quantity is 0, it should be removed from the shopping cart
+  //   for (let i = 0; i < shoppingCart.length; i++) {
+  //     if (shoppingCart[i].itemId === productId) {
+  //       if (shoppingCart[i].quantity == 1) {
+  //         shoppingCart.splice(i, 1);
+  //       } else {
+  //         shoppingCart[i].quantity--;
+  //       }
+  //       setShoppingCart([...shoppingCart]);
+  //     }
+  //   }
+  // };
+
   const handleRemoveItemFromCart = (productId) => {
-    //decrease quantity in shopping cart by 1 - only if it exists
-    //if product does not exist, nothing should happen
-    //if new quantity is 0, it should be removed from the shopping cart
-    for (let i = 0; i < shoppingCart.length; i++) {
+    var newItem;
+    var newCart = [];
+
+    for (var i = 0; i < shoppingCart.length; i++) {
       if (shoppingCart[i].itemId === productId) {
-        if (shoppingCart[i].quantity == 1) {
-          shoppingCart.splice(i, 1);
-        } else {
+        if (shoppingCart[i].quantity != 1) {
           shoppingCart[i].quantity--;
+          setShoppingCart([...shoppingCart]);
+          var tempPrice =
+            subtotal - products.find((item) => item.id === productId).price;
+          setSubtotal(tempPrice);
+          return;
+        } else {
+          shoppingCart.splice(i, 1);
+          setShoppingCart([...shoppingCart]);
+          var tempPrice =
+            subtotal - products.find((item) => item.id === productId).price;
+          setSubtotal(tempPrice);
+          return;
         }
-        setShoppingCart([...shoppingCart]);
       }
     }
   };
 
-  //const handleOnCheckoutFormChange = (name, value) => {
-  //   //update checkout form
-  // };
+  const handleOnCheckoutFormChange = (name, value) => {
+    //update checkout form
+  };
 
-  //const handleOnSubmit = () => {
-  //   //look at the readme file
-  //   //should submit user order to API
-  // };
+  const handleOnSubmitCheckoutForm = () => {
+    //look at the readme file
+    //should submit user order to API
+  };
 
   //---------------------------
   return (
@@ -111,7 +161,18 @@ export default function App() {
           {/* <Navbar />
           <SubNavbar setFilter={setFilter} filter={filter} />
           <SearchBar search={search} setSearch={setSearch} /> */}
-          <Sidebar isOpen={isOpen} handleOnToggle={handleOnToggle} />
+          <Sidebar
+            isOpen={isOpen}
+            handleOnToggle={handleOnToggle}
+            handleOnCheckoutFormChange={handleOnCheckoutFormChange}
+            handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
+            checkoutForm={checkoutForm}
+            shoppingCart={shoppingCart}
+            products={products}
+            // cartSize={cartSize.length}
+            subtotal={subtotal}
+            setSubtotal={setSubtotal}
+          />
           {/* <Home /> */}
           <Routes>
             <Route
@@ -121,17 +182,23 @@ export default function App() {
                   products={products}
                   handleOnToggle={handleOnToggle}
                   isOpen={isOpen}
-                  // search={search}
-                  // setSearch={setSearch}
-                  // filter={filter}
-                  // setFilter={setFilter}
+                  handleAddItemToCart={handleAddItemToCart}
+                  handleRemoveItemFromCart={handleRemoveItemFromCart}
+                  shoppingCart={shoppingCart}
+                  setShoppingCart={setShoppingCart}
+                  handleOnCheckoutFormChange={handleOnCheckoutFormChange}
+                  handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
+                  checkoutForm={checkoutForm}
+                  subtotal={subtotal}
+                  cartSize={shoppingCart.length}
+                  setSubtotal={setSubtotal}
                 />
               }
             />
             <Route path="/products/:productId" element={<ProductDetail />} />
             <Route path="*" element={<NotFound />} />
             {/* <Route path="/aboutUs" element={<AboutUs />} /> */}
-            <Route path="/ContactUs" element={<ContactUs />} />
+            {/* <Route path="/ContactUs" element={<ContactUs />} /> */}
             {/* <Route path="navbar" element={<Navbar />} />
             <Route path="sidebar" element={<Sidebar />} /> */}
           </Routes>

@@ -10,12 +10,12 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 
 #### Core Features
 
-- [ ] Displays the following sections: header, banner, search, product grid, about, contact, and footer.
+- [x] Displays the following sections: header, banner, search, product grid, about, contact, and footer.
 - [x] On initial page load, display the products at the [GET /store endpoint](https://codepath-store-api.herokuapp.com/store).
-- [ ] User can click on the categories (Clothing, food, etc) to filter the product grid by type.
-- [ ] User can search for products.
-- [ ] User can click on a product in the grid to view additional product details. Navigation is via a React Router.
-- [ ] User can click to expand the shopping cart in the left navigation.
+- [x] User can click on the categories (Clothing, food, etc) to filter the product grid by type.
+- [x] User can search for products.
+- [x] User can click on a product in the grid to view additional product details. Navigation is via a React Router.
+- [x] User can click to expand the shopping cart in the left navigation.
 - [ ] User can click the '+' button on a product cart to increment that product in the shopping cart.
 - [ ] User can click the '-' button on a product cart to increment that product in the shopping cart.
 - [ ] Shopping cart displays a table of products, quantities, subtotal, tax, and total.
@@ -24,7 +24,7 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 #### Stretch Features
 
 - [ ] User can click in the top navigation bar to scroll to the relevant section.
-- [ ] User sees a "not found" display when searching for a nonexistent product.
+- [x] User sees a "not found" display when searching for a nonexistent product.
 - [ ] Create an endpoint for fetching all orders in the database, and an endpoint for serving an individual order based on its id.
 - [ ] Build a page in the UI that displays the list of all past orders and lets the user click on any individual order to take them to a more detailed page of the transaction.
 - [ ] Allow users to use an input to filter orders by the email of the person who placed the order.
@@ -65,7 +65,7 @@ The following specifications were met on the Express backend and the React front
   - [ ] Define as many as are needed.
   - [ ] At minimum, **create these five handlers**:
     - [x] The **`handleOnToggle`** function. When called...
-      - [ ] It should toggle the open/closed state of the `Sidebar`.
+      - [x] It should toggle the open/closed state of the `Sidebar`.
     - [ ] The **`handleAddItemToCart`** function. When called...
       - [x] It should accept a single argument - `productId`
       - [ ] It should add that product to the `shoppingCart` if it doesn't exist, and set its quantity to `1`.
@@ -141,9 +141,9 @@ The following specifications were met on the Express backend and the React front
 - [ ] When the component is mounted to the screen...
   - [x] It should make a `GET` request to the `/store/:productId` endpoint with the `axios.get` method.
   - [x] The `:productId` part of the request should be replaced with the `productId` pulled from the url.
-  - [ ] When the initial request is loading, it should render an `h1` element with the `className` of `loading` and contain the text `"Loading..."`
-  - [ ] It should store the `product` received by the request in state and then render the `ProductView` component.
-  - [ ] If no `product` is found with that `id`, it should render the `NotFound` component
+  - [x] When the initial request is loading, it should render an `h1` element with the `className` of `loading` and contain the text `"Loading..."`
+  - [x] It should store the `product` received by the request in state and then render the `ProductView` component.
+  - [x] If no `product` is found with that `id`, it should render the `NotFound` component
 
 **ProductView.jsx**
 
@@ -155,7 +155,7 @@ The following specifications were met on the Express backend and the React front
   - `handleAddItemToCart` - handler function
   - `handleRemoveItemToCart` - handler function
 - [x] It should display an `h1` element with the `className` of `product-id` that contains the text: `Product #` followed by the `productId` prop
-- [ ] It should render a `ProductCard` component and pass it the props it needs. It should also set the `showDescription` prop to `true` for this product card.
+- [x] It should render a `ProductCard` component and pass it the props it needs. It should also set the `showDescription` prop to `true` for this product card.
 
 **ProductCard.jsx**
 
@@ -175,7 +175,7 @@ The following specifications were met on the Express backend and the React front
   - [x] The `img` element should be wrapped in a `Link` component from `react-router-dom`.
     - [x] The `Link` element should have a `to` prop so that when the `img` element is clicked on, it should navigate to the product detail route for that product using its `id` attribute. For example, a product with an `id` of `4` should create a `Link` with its `to` prop set to `/products/4`.
     - [x] The `Link` that wraps the `img` element should be nested somewhere inside an element with the `className` of `media`.
-- [ ] Should render two `buttons` elements...
+- [x] Should render two `buttons` elements...
   - [ ] One button with a `className` of `add`. When clicked, it should call the `handleAddItemToCart` function with the `id` of the `product` as its only argument.
   - [ ] One button with a `className` of `remove`. When clicked, it should call the `handleRemoveItemFromCart` function with the `id` of the `product` as its only argument.
 - [ ] Should display the current quantity of items that the user has selected in their shopping cart. The quantity should be rendered inside an element with the `className` of `product-quantity`. If none of that particular item have been added to the shopping cart, it should render nothing there.
@@ -193,7 +193,7 @@ The following specifications were met on the Express backend and the React front
   - `handleOnToggle` - handler function to toggle open/closed `Sidebar` state
 - [x] It should always render a `button` element with the `className` of `toggle-button`. When that button is clicked it should change the `isOpen` prop by calling the `handleOnToggle` prop.
 - [ ] When the sidebar is opened, it should display the `ShoppingCart` and `CheckoutForm` components and should be wider than `350px`.
-- [ ] When the sidebar is closed, it should only render the toggle button and shouldn't be wider than `150px`.
+- [x] When the sidebar is closed, it should only render the toggle button and shouldn't be wider than `150px`.
 
 **ShoppingCart.jsx**
 
@@ -211,29 +211,29 @@ The following specifications were met on the Express backend and the React front
 
 **CheckoutForm.jsx**
 
-- [ ] Should render JSX that is wrapped by a `div` element with the `className` of `checkout-form`
+- [x] Should render JSX that is wrapped by a `div` element with the `className` of `checkout-form`
 - [ ] Should accept **at least** the following props:
   - `isOpen` - boolean
   - `shoppingCart` - the active user's cart formatted as an array of objects with `itemId` and `quantity` keys
   - `checkoutForm` - the form state for the `CheckoutForm` component
   - `handleOnCheckoutFormChange` - handler function to update the `checkoutForm`
   - `handleOnSubmitCheckoutForm` - handler function to submit the user's order to the API
-- [ ] Should render two `input` elements, each with the `className` of `checkout-form-input`
+- [x] Should render two `input` elements, each with the `className` of `checkout-form-input`
   - [ ] The `checkoutForm` prop should supply the correct props needed to create the two controlled inputs:
     - [ ] The first input should have:
-      - [ ] the `type` prop set to `email`
-      - [ ] the `name` prop set to `email`
-      - [ ] the `placeholder` prop set to `student@codepath.org`
-      - [ ] the `value` prop set by `checkoutForm.email`.
+      - [x] the `type` prop set to `email`
+      - [x] the `name` prop set to `email`
+      - [x] the `placeholder` prop set to `student@codepath.org`
+      - [x] the `value` prop set by `checkoutForm.email`.
       - [ ] a valid `onChange` prop that uses the `handleOnCheckoutFormChange` function to update the `checkoutForm` state
     - [ ] The second input should have:
-      - [ ] the `type` prop set to `text`
-      - [ ] the `name` prop set to `name`
-      - [ ] the `placeholder` prop set to `Student Name`
-      - [ ] the `value` prop set by `checkoutForm.name`.
+      - [x] the `type` prop set to `text`
+      - [x] the `name` prop set to `name`
+      - [x] the `placeholder` prop set to `Student Name`
+      - [x] the `value` prop set by `checkoutForm.name`.
       - [ ] a valid `onChange` prop that uses the `handleOnCheckoutFormChange` function to update the `checkoutForm` state
 - [ ] Should render a `button` element with the `className` of `checkout-button`.
-  - [ ] It should contain the text `Checkout`.
+  - [x] It should contain the text `Checkout`.
   - [ ] When clicked, it should call the `handleOnSubmit` function.
     - [ ] If that request fails, the `CheckoutForm` component should display an error message inside an element with the `className` of `error`.
     - [ ] If the `POST` request is successful...
@@ -256,7 +256,7 @@ The following specifications were met on the Express backend and the React front
 **Routes** - The API should contain a route mounted at the `/store` endpoint
 
 - [ ] It should respond to `GET` requests to `/store` with an array of all products in the store in this format: `{ "products": products }`
-- [ ] It should respond to `GET` requests to `/store/:productId` with a single product based on the product's id using this JSON format: `{ "product": product }`
+- [x] It should respond to `GET` requests to `/store/:productId` with a single product based on the product's id using this JSON format: `{ "product": product }`
 - [ ] It should allow `POST` requests to the `/store` endpoint:
   - [ ] The endpoint should create purchase orders for users and save them to the `db.json` file
   - [ ] The endpoint should accept a request body that contains `shoppingCart` and `user` fields.
@@ -289,6 +289,7 @@ The following specifications were met on the Express backend and the React front
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
 Add your response here
+I felt that both labs for this week did help me understand React.js syntax. There were various new topics introduced that helped me with this project.
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 

@@ -9,6 +9,8 @@ export function ProductView({
   addItems,
   removeItems,
   shoppingCart,
+  handleAddItemToCart,
+  handleRemoveItemFromCart,
 }) {
   //console.log("[prod]=",product)
   return (
@@ -23,6 +25,8 @@ export function ProductView({
         allowLink={false}
         showDescription={true}
         shoppingCart={shoppingCart}
+        handleAddItemToCart={handleAddItemToCart}
+        handleRemoveItemFromCart={handleRemoveItemFromCart}
       />
     </div>
   );

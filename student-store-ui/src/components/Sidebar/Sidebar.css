@@ -154,6 +154,7 @@
   background: transparent;
   color: white;
   border: none;
+  cursor: pointer;
 }
 .toggle-button.open {
   transform: rotate(180deg);
@@ -167,6 +168,7 @@
 .material-icons.md-48 {
   color: white;
   font-size: 40px;
+  cursor: pointer;
 }
 
 .cart-icons {

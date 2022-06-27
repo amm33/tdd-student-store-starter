@@ -55,7 +55,7 @@
 import * as React from "react";
 import "./Sidebar.css";
 import CheckoutForm from "../Navbar/CheckoutForm/CheckoutForm";
-// import ShoppingCart from "./ShoppingCart/ShoppingCart";
+import ShoppingCart from "./ShoppingCart/ShoppingCart";
 
 // export default function Sidebar({
 //   isOpen,
@@ -142,16 +142,15 @@ export default function Sidebar(props) {
             </button>
           </div>
         </div>
-        {/* <ShoppingCart
+        <ShoppingCart
           isOpen={props.isOpen}
           shoppingCart={props.shoppingCart}
           products={props.products}
           subtotal={props.subtotal}
-          quantity={props.shoppingCart.length}
-        /> */}
+        />
         <CheckoutForm
-          // handleOnSubmitCheckoutForm={props.handleOnSubmitCheckoutForm}
-          // handleOnCheckoutFormChange={props.handleOnCheckoutFormChange}
+          handleOnSubmitCheckoutForm={props.handleOnSubmitCheckoutForm}
+          handleOnCheckoutFormChange={props.handleOnCheckoutFormChange}
           isOpen={props.isOpen}
           shoppingCart={props.shoppingCart}
           checkoutForm={props.checkoutForm}
