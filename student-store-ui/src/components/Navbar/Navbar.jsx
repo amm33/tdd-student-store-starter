@@ -18,18 +18,17 @@ export default function Navbar() {
       </span>
 
       <span>
-        <Link to="/AboutUs" href="/#AboutUs">
-          About Us
-        </Link>
+        <a href="/#AboutUs">About Us</a>
+        {/* <Link to="/#AboutUs">About Us</Link> */}
       </span>
 
       <span>
-        <Link to="/ContactUs" href="/#ContactUs">
-          Contact Us
-        </Link>
+        <a href="/#ContactUs">About Us</a>
+        {/* <Link to="/#ContactUs">Contact Us</Link> */}
       </span>
       <span>
-        <Link to="/#Buy Now">Buy Now</Link>
+        <a href="/#BuyNow">Buy Now</a>
+        {/* <Link to="/#BuyNow">Buy Now</Link> */}
       </span>
     </nav>
   );
