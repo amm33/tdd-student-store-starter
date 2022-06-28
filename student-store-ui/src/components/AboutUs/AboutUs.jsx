@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./AboutUs.css";
 
+//structure of the about us section
 const AboutUs = () => {
   return (
     <div className="AboutUs">

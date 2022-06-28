@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./Footer.css";
 
+//structure of the Footer section
 export default function Footer() {
   return (
     <div className="footer">

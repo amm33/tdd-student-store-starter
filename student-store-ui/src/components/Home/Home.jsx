@@ -31,6 +31,8 @@ export default function Home(props) {
     }
   };
 
+  //categories
+  //All button is clicked
   const handleAll = () => {
     if (all) {
       setAll(false);
@@ -43,6 +45,7 @@ export default function Home(props) {
       setSelectedCategory("");
     }
   };
+  //Clothing button is clicked
   const handleClothing = () => {
     if (clothing) {
       setClothing(false);
@@ -56,6 +59,7 @@ export default function Home(props) {
       setSelectedCategory("clothing");
     }
   };
+  //Food button is clicked
   const handleFood = () => {
     if (food) {
       setFood(false);
@@ -69,6 +73,7 @@ export default function Home(props) {
       setSelectedCategory("food");
     }
   };
+  //Accessories button is clicked
   const handleAccessories = () => {
     if (accessories) {
       setAccessories(false);
@@ -81,6 +86,7 @@ export default function Home(props) {
       setSelectedCategory("accessories");
     }
   };
+  //Tech button is clicked
   const handleTech = () => {
     if (tech) {
       setTech(false);

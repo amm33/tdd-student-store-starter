@@ -1,6 +1,7 @@
 import React from "react";
 import "./Hero.css";
 
+//structure of the hero banner
 const Hero = () => {
   return (
     <div className="Hero">

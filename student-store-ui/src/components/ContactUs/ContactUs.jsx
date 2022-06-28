@@ -2,6 +2,7 @@ import * as React from "react";
 import "./ContactUs.css";
 import { SocialIcon } from "react-social-icons";
 
+//structure of the contact us section
 const ContactUs = () => {
   return (
     <div className="ContactUs">
