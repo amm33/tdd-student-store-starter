@@ -31,9 +31,11 @@ export default function ProductCard({
           <p className="product-price"> {"$" + product.price.toFixed(2)}</p>
         </div>
         <div className="actions">
-          {showDescription ? (
-            <p className="product-description">{product.description}</p>
-          ) : null}
+          <div className="description">
+            {showDescription ? (
+              <p className="product-description">{product.description}</p>
+            ) : null}
+          </div>
           <div className="buttons">
             <button
               className="add"

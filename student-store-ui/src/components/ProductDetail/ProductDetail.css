@@ -1,0 +1,8 @@
+.product-card {
+  transform: translateY(100px);
+}
+
+.product-card .actions .description {
+  margin: 0;
+  padding: 0;
+}

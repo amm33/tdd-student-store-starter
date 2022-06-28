@@ -1,3 +1,9 @@
 .product-id {
   color: black;
 }
+
+.product-view {
+  display: flex;
+  justify-content: left;
+  transform: translateX(100px);
+}

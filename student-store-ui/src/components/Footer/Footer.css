@@ -1,8 +1,32 @@
-.footer-container {
+/* .footer-container {
   padding: 40px;
   display: flex inline;
   flex-flow: row nowrap;
   justify-content: space-between;
   margin: 0 auto;
   width: 90%;
+  /* display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateY(-100px); */
+/* }
+
+.footer .footer-container-company {
+  transform: translateY(100px);
+} */
+
+.footer-links-container {
+  padding: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+  /* transform: translateY(300px); */
+}
+
+.FooterRow {
+  transform: translateX(1000px);
 }

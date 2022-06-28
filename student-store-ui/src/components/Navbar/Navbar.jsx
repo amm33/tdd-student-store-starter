@@ -40,16 +40,16 @@ export default function Navbar() {
         <Link to="/">Home</Link>
       </span>
 
-      <span>
+      <span className="aboutus">
         <a href="/#AboutUs">About Us</a>
         {/* <Link to="/#AboutUs">About Us</Link> */}
       </span>
 
-      <span>
+      <span className="contactus">
         <a href="/#ContactUs">Contact Us</a>
         {/* <Link to="/#ContactUs">Contact Us</Link> */}
       </span>
-      <span>
+      <span className="buynow">
         <a href="/#BuyNow">Buy Now</a>
         {/* <Link to="/#BuyNow">Buy Now</Link> */}
       </span>
