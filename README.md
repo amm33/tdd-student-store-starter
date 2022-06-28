@@ -292,15 +292,17 @@ The following specifications were met on the Express backend and the React front
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
 Add your response here
-I felt that both labs for this week did help me understand React.js syntax. There were various new topics introduced that helped me with this project.
+I felt that both labs for this week did help me understand React.js syntax. There were various new topics introduced that helped me with this project. Having a prior lab that focused on fetching data using Axios was extremely helpful for fetching data in this project. Additionally, the two labs used different hooks (the useState, useEffect, and useParams) which helped me understand how I could use them for my project. Since these were all new topics for me, I felt challenged during the week, but by doing my research and asking questions, I feel a bit more comfortable working with React.js.
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
 Add your response here
+If I had more time to work on the project, I would love to work on styling a bit more. One page that I was dissatisfied with is the product detail pages. I would love to dedicate some time to make it look more visually pleasing. I would also like to work on the checkout form and have the checkout button work. An idea I had to add to the project is pagination for when more products could potentially be added. Instead of having a long page (if more products were added), pagination could be helpful to get things more organized.
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
 Add your response here
+I had a bit more difficulties with this project compared to the last as this project featured new topics. Despite my difficulties, I was able to get several of the features done. One feature that I found very challenging was the shopping cart and making sure the object would pop up or disappear when the add or remove buttons is clicked. I noticed that some of my peers changed the colors and added different styling to their stores. This would be something I would love to do.
 
 ### Open-source libraries used
 
