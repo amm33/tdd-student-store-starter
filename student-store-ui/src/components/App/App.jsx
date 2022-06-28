@@ -77,7 +77,7 @@ export default function App() {
 
   const handleAddItemToCart = (productId) => {
     var newItem;
-    var newCart = [];
+    // var newCart = [];
 
     for (var i = 0; i < shoppingCart.length; i++) {
       if (shoppingCart[i].itemId === productId) {
@@ -99,6 +99,7 @@ export default function App() {
     var tempPrice =
       products.find((item) => item.id === productId).price + subtotal;
     setSubtotal(tempPrice);
+    // console.log(subtotal);
   };
 
   // const handleRemoveItemFromCart = (productId) => {

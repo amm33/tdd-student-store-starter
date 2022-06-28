@@ -21,23 +21,23 @@ export default function ShoppingCart({
   //   );
   // });
 
-  // //if there is nothing in the cart yet
-  // if (cartSize === 0) {
-  //   return (
-  //     <div className="shopping-cart">
-  //       <div className={isOpen ? "open" : "closed"}>
-  //         <h3 className="shopping-cart">
-  //           Shopping Cart
-  //           <span className="cart">
-  //             <i className="material-icons md-48">add_shopping_cart</i>
-  //           </span>
-  //         </h3>
-  //         <div>No item added to the cart yet. Start Shopping!</div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
-  // //otherwise
+  //if there is nothing in the cart yet
+  if (cartSize === 0) {
+    return (
+      <div className="shopping-cart">
+        <div className={isOpen ? "open" : "closed"}>
+          <h3 className="shopping-cart">
+            Shopping Cart
+            <span className="cart">
+              <i className="material-icons md-48">add_shopping_cart</i>
+            </span>
+          </h3>
+          <div>No item added to the cart yet. Start Shopping!</div>
+        </div>
+      </div>
+    );
+  }
+  //otherwise
   return (
     <div className="shopping-cart">
       <div className={isOpen ? "open" : "closed"}>
@@ -48,7 +48,7 @@ export default function ShoppingCart({
           </span>
         </h3>
         {/* cart table component */}
-        <div className="Cart">
+        <div className="CartTable">
           <div className="header">
             <div className="header-row">
               <span className="flex-2">Name</span>

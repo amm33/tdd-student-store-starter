@@ -1,11 +1,93 @@
 .ContactUs {
-  background: #2c4047;
-  max-width: 1100px;
+  width: 100%;
+  max-width: 100vw;
+  min-height: 350px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.ContactUs .contact-info {
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
+  min-height: 350px;
+}
+
+.ContactUs .contact-info h3 {
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.ContactUs .contact-info .summary {
+  display: flex;
   flex-direction: row;
+  background: #2c4047;
+  color: white;
+  height: 330px;
+  border: solid 1px #e0e0e0;
+  overflow: visible;
+}
+
+.ContactUs .contact-info .summary .info {
+  padding-top: 28px;
+  padding-right: 36px;
+  padding-bottom: 28px;
+  padding-left: 36px;
+  color: white;
+  list-style-type: none;
+
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.ContactUs .contact-info .summary .info li {
+  color: white;
+  margin-bottom: 18px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.ContactUs .contact-info .summary .info li span {
+  width: 100px;
+  margin-right: 20px;
+  color: white;
+  margin-bottom: -48.3px;
+  transform: translateY(-15px);
+}
+
+.ContactUs .contact-info .summary .info li .socials-icon {
+  color: white;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 300px;
+  width: 150px;
+  transform: translateX(-25px) translateY(-15px);
+}
+
+.ContactUs .contact-info .media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 330px;
+}
+
+.ContactUs .contact-info .media img {
+  transform: translateY(-330px) translateX(200px);
 }

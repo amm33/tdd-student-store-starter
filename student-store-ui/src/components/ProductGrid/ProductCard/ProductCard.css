@@ -143,3 +143,66 @@
   width: 20px;
   background-color: #e5a800;
 }
+
+.actions {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.buttons {
+  width: 80px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+/* 
+.add {
+  display: flex;
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  max-height: fit-content;
+  max-width: fit-content;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+} */
+
+/* .remove {
+  display: flex;
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  max-height: fit-content;
+  max-width: fit-content;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+} */
+
+.remove {
+  display: flex;
+  margin-right: -150px;
+  margin-top: -100px;
+  /* border: none; */
+  cursor: pointer;
+  border-width: thin;
+}
+
+.add {
+  display: flex;
+  margin-right: 10px;
+  margin-top: -100px;
+  /* border: none; */
+  cursor: pointer;
+  border-width: thin;
+}
