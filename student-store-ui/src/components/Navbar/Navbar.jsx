@@ -46,7 +46,7 @@ export default function Navbar() {
       </span>
 
       <span>
-        <a href="/#ContactUs">About Us</a>
+        <a href="/#ContactUs">Contact Us</a>
         {/* <Link to="/#ContactUs">Contact Us</Link> */}
       </span>
       <span>
