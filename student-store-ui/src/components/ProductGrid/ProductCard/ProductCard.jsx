@@ -53,9 +53,11 @@ export default function ProductCard({
             </button>
           </div>
 
-          {quantity ? (
-            <span className="product-quantity">{quantity}</span>
-          ) : null}
+          <div className="quantity">
+            {quantity ? (
+              <span className="product-quantity">{quantity}</span>
+            ) : null}
+          </div>
         </div>
       </div>
     </div>
