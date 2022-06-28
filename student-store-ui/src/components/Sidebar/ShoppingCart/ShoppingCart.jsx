@@ -32,7 +32,9 @@ export default function ShoppingCart({
               <i className="material-icons md-48">add_shopping_cart</i>
             </span>
           </h3>
-          <div>No item added to the cart yet. Start Shopping!</div>
+          <div className="notification">
+            No item added to the cart yet. Start Shopping!
+          </div>
         </div>
       </div>
     );
