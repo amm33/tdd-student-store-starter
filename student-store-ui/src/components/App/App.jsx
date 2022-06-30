@@ -36,11 +36,11 @@ export default function App() {
   //useEffect allows you to perform side effects in your components - fetching data
   useEffect(async () => {
     await axios
-      .get(url)
+      .get(`http://localhost:3001/store`)
       .then((response) => {
         console.log("Response " + response);
         let responseD = response.data;
-        setProducts(responseD.products);
+        setProducts(responseD);
         console.log("Response.data " + response.data);
         console.log(responseD);
         // console.log(products);
