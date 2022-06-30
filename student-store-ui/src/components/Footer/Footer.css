@@ -30,3 +30,7 @@
 .FooterRow {
   transform: translateX(1000px);
 }
+
+.footer {
+  transform: translateY(-300px);
+}

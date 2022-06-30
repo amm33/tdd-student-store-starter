@@ -9,7 +9,6 @@ export default function ShoppingCart({
   subtotal,
   cartSize,
 }) {
-  var subtot = Math.round((subtotal + Number.Epsilon) * 100) / 100;
   var taxes = subtotal * 0.0875;
   var total = subtotal + taxes;
   total = Math.round((total + Number.EPSILON) * 100) / 100;
@@ -67,6 +66,9 @@ export default function ShoppingCart({
                   <span className="flex-2 cart-product-name">
                     {products.find((elem) => elem.id === item.itemId).name}
                   </span>
+                  <span className="center cart-product-quantity">
+                    {item.quantity}
+                  </span>
                   <span className="center cart-product-price">
                     ${products.find((elem) => elem.id === item.itemId).price}
                   </span>
@@ -85,7 +87,7 @@ export default function ShoppingCart({
             <span className="label">Subtotal</span>
             <span></span>
             <span></span>
-            <span className="center subtotal">{"$" + subtot}</span>
+            <span className="center subtotal">${subtotal.toFixed(2)}</span>
           </div>
           <div className="receipt-taxes">
             <span className="label">Taxes and Fees</span>
@@ -97,16 +99,10 @@ export default function ShoppingCart({
             <span className="label">Total</span>
             <span></span>
             <span></span>
-            <span className="center total-price">{"$" + total}</span>
+            <span className="center total-price">{"$" + total.toFixed(2)}</span>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
-// <div className="cart-product-name"></div>
-// <div className="cart-product-quantity"></div>
-// <div className="subtotal"></div>
-// <div className="total-price"></div>
-// <div className="notification"></div>

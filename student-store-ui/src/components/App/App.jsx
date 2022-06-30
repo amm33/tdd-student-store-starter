@@ -24,7 +24,7 @@ export default function App() {
   const [isOpen, setIsOpen] = useState(null); //represents whether the sidebar is open or not
   const [shoppingCart, setShoppingCart] = useState([]); //store state for users shopping cart (what they want and the quantity)
   const [checkoutForm, setCheckoutForm] = useState(null); //users info which will be sent to the API at checkout
-  const [subtotal, setSubtotal] = useState(null);
+  const [subtotal, setSubtotal] = useState(0);
 
   // const [search, setSearch] = useState("");
   // const [filter, setFilter] = useState("");
@@ -136,7 +136,7 @@ export default function App() {
             checkoutForm={checkoutForm}
             shoppingCart={shoppingCart}
             products={products}
-            // cartSize={cartSize.length}
+            cartSize={shoppingCart.length}
             subtotal={subtotal}
             setSubtotal={setSubtotal}
           />

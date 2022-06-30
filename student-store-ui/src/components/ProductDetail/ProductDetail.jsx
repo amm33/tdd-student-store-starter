@@ -151,7 +151,9 @@ export function ProductDetail({
         checkoutForm={checkoutForm}
         shoppingCart={shoppingCart}
         products={products}
+        // cartSize={shoppingCart.length}
         subtotal={subtotal}
+        // setSubtotal={setSubtotal}
       />
       <Navbar />
       {!product ? null : (
