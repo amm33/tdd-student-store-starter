@@ -32,3 +32,17 @@
 // });
 
 // module.exports = router;
+
+const Store = require("../models/store");
+const express = require("express");
+const { getProductsWithId } = require("../models/store");
+
+const router = express.Router();
+
+router.get("/:productId", (req, res, next) => {
+  const prodId = req.params.productId;
+  const product = Store.getProductsWithId(Number(prodId));
+  res.status(200).json({ product: product });
+});
+
+module.exports = router;

@@ -252,13 +252,13 @@ The following specifications were met on the Express backend and the React front
 
 **Models** - The API should use a `Store` model that handles the following
 
-- [ ] List all products currently in the `db.json` file
-- [ ] Fetch a single product by its id
+- [x] List all products currently in the `db.json` file
+- [x] Fetch a single product by its id
 - [ ] Create a purchase order
 
 **Routes** - The API should contain a route mounted at the `/store` endpoint
 
-- [ ] It should respond to `GET` requests to `/store` with an array of all products in the store in this format: `{ "products": products }`
+- [x] It should respond to `GET` requests to `/store` with an array of all products in the store in this format: `{ "products": products }`
 - [x] It should respond to `GET` requests to `/store/:productId` with a single product based on the product's id using this JSON format: `{ "product": product }`
 - [ ] It should allow `POST` requests to the `/store` endpoint:
   - [ ] The endpoint should create purchase orders for users and save them to the `db.json` file

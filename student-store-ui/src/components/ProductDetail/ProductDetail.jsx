@@ -133,9 +133,11 @@ export function ProductDetail({
 
   useEffect(() => {
     axios
-      .get("https://codepath-store-api.herokuapp.com/store/" + params.productId)
+      //.get("https://codepath-store-api.herokuapp.com/store/" + params.productId)
+      .get(`http://localhost:3001/store/` + params.productId)
       .then((res) => {
         setProduct(res.data.product);
+        // setProduct(res.data);
       });
   }, []);
 
