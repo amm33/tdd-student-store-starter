@@ -1,7 +1,7 @@
-const Store = require("../models/store");
+const Store = require("../models/Store");
 const express = require("express");
-const { getProductsWithId } = require("../models/store");
-const { BadRequestError } = require("../utils/error");
+const { getProductsWithId } = require("../models/Store");
+const { BadRequestError } = require("../utils/errors");
 const { json } = require("express");
 
 const router = express.Router();

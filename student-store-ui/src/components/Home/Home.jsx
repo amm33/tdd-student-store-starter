@@ -2,7 +2,6 @@ import * as React from "react";
 import "./Home.css";
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
-import Logo from "../Navbar/Logo/Logo";
 import Hero from "../Home/Hero/Hero";
 import ProductGrid from "../ProductGrid/ProductGrid";
 import AboutUs from "../AboutUs/AboutUs";
@@ -132,7 +131,7 @@ export default function Home(props) {
                 type="text"
                 name="search"
                 placeholder="Search"
-                onChange={handleOnTextChange}
+                // onChange={handleOnTextChange}
               ></input>
               <i className="material-icons">search</i>
             </div>
@@ -198,8 +197,8 @@ export default function Home(props) {
         <h2 className="heading"> Best Selling Products</h2>
       </a>
       <ProductGrid
-        search={props.search}
-        filter={props.filter}
+        // search={props.search}
+        // filter={props.filter}
         // had to change this to searchItems so that filter and search can work for the product grid - without it didn't work
         products={searchItems}
         handleAddItemToCart={props.handleAddItemToCart}

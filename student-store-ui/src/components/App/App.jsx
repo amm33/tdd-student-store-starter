@@ -4,11 +4,6 @@ import Sidebar from "../Sidebar/Sidebar";
 import Home from "../Home/Home";
 import ProductDetail from "../ProductDetail/ProductDetail";
 import NotFound from "../NotFound/NotFound";
-
-import AboutUs from "../AboutUs/AboutUs";
-import ContactUs from "../ContactUs/ContactUs";
-import BuyNow from "../BuyNow/BuyNow";
-//import ProductGrid from "../ProductGrid/ProductGrid"
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
@@ -17,6 +12,11 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 export default function App() {
+  var item = {
+    itemId: 4,
+    quantity: 2,
+  };
+
   //state variables
   const [products, setProducts] = useState([]); //array of product objects, empty initially
   const [isFetching, setIsFetching] = useState(null); //boolean; represents whether App is currently fetching products from the API
@@ -30,18 +30,20 @@ export default function App() {
   // const [filter, setFilter] = useState("");
 
   //getting the data
-  const url = `https://codepath-store-api.herokuapp.com/store`;
+  //const url = `https://codepath-store-api.herokuapp.com/store`;
   // const { id } = useParams();
 
   //useEffect allows you to perform side effects in your components - fetching data
   useEffect(async () => {
+    let url = `http://localhost:3001/store`;
+
     await axios
-      .get(`http://localhost:3001/store`)
+      .get(url)
       .then((response) => {
         console.log("Response " + response);
         let responseD = response.data;
         setProducts(responseD);
-        console.log("Response.data " + response.data);
+        console.log("Response.data " + response.data.products);
         console.log(responseD);
         // console.log(products);
       })
