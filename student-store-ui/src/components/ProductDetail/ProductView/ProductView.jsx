@@ -11,6 +11,7 @@ export function ProductView({
   shoppingCart,
   handleAddItemToCart,
   handleRemoveItemFromCart,
+  setIsFetching,
 }) {
   //console.log("[prod]=",product)
   return (
@@ -27,6 +28,7 @@ export function ProductView({
         shoppingCart={shoppingCart}
         handleAddItemToCart={handleAddItemToCart}
         handleRemoveItemFromCart={handleRemoveItemFromCart}
+        setIsFetching={setIsFetching}
       />
     </div>
   );

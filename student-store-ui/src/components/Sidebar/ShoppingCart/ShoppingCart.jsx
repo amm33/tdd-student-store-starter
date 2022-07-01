@@ -87,7 +87,7 @@ export default function ShoppingCart({
             <span className="label">Subtotal</span>
             <span></span>
             <span></span>
-            <span className="center subtotal">${subtotal.toFixed(2)}</span>
+            <span className="center subtotal">${subtotal}</span>
           </div>
           <div className="receipt-taxes">
             <span className="label">Taxes and Fees</span>

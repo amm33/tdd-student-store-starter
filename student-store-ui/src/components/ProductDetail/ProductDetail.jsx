@@ -126,6 +126,8 @@ export function ProductDetail({
   handleAddItemToCart,
   handleRemoveItemFromCart,
   showDescription,
+  setIsFetching,
+  isFetching,
 }) {
   const [product, setProduct] = useState();
   const params = useParams();
@@ -141,6 +143,14 @@ export function ProductDetail({
       });
   }, []);
 
+  //if still fetching, render loading page
+  if (isFetching) {
+    return (
+      <div className="loading">
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
   return (
     <div className="product-detail">
       <Sidebar
@@ -171,6 +181,7 @@ export function ProductDetail({
           showDescription={showDescription}
           handleAddItemToCart={handleAddItemToCart}
           handleRemoveItemFromCart={handleRemoveItemFromCart}
+          setIsFetching={setIsFetching}
         />
       )}
     </div>

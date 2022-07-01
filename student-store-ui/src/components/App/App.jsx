@@ -162,7 +162,24 @@ export default function App() {
                 />
               }
             />
-            <Route path="/products/:productId" element={<ProductDetail />} />
+            <Route
+              path="/products/:productId"
+              element={
+                <ProductDetail
+                  handleAddItemToCart={handleAddItemToCart}
+                  handleRemoveItemFromCart={handleRemoveItemFromCart}
+                  shoppingCart={shoppingCart}
+                  isOpen={isOpen}
+                  products={products}
+                  handleOnCheckoutFormChange={handleOnCheckoutFormChange}
+                  handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
+                  handleOnToggle={handleOnToggle}
+                  checkoutForm={checkoutForm}
+                  subtotal={subtotal}
+                  cartSize={shoppingCart.length}
+                />
+              }
+            />
             <Route path="*" element={<NotFound />} />
             {/* <Route path="/aboutUs" element={<AboutUs />} /> */}
             {/* <Route path="/ContactUs" element={<ContactUs />} /> */}
