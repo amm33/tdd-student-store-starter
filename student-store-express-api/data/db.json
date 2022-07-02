@@ -145,5 +145,221 @@
       "price": 999.99
     }
   ],
-  "purchases": []
+  "purchases": [
+    {
+      "id": 1,
+      "name": "Adriana",
+      "email": "adriana@gmail.com",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 2
+        },
+        {
+          "itemId": 1,
+          "quantity": 2
+        }
+      ],
+      "total": 5.41575,
+      "createdAt": "Date: 7:1:2022 Time: 17:8:41",
+      "receipt": {
+        "userInfo": {
+          "name": "Adriana",
+          "email": "adriana@gmail.com"
+        },
+        "lines": [
+          "Receipt for Adrianaavailable at adriana@gmail.com",
+          "2 total Flamin Hot Cheetos purchased at a cost of 1.5 for a total cost of 3.",
+          "2 total Rice Krispies purchased at a cost of 0.99 for a total cost of 1.98.",
+          "Before taxes and fees: $4.98",
+          "After taxes and fees: $5.41575"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Adriana2",
+      "email": "Adriana2@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 2
+        },
+        {
+          "itemId": 4,
+          "quantity": 2
+        }
+      ],
+      "total": 11.407874999999999,
+      "createdAt": "Date: 7:1:2022 Time: 17:16:25",
+      "receipt": {
+        "userInfo": {
+          "name": "Adriana2",
+          "email": "Adriana2@gmail.com"
+        },
+        "lines": [
+          "Receipt for Adriana2available at Adriana2@gmail.com",
+          "1 total Rice Krispies purchased at a cost of 0.99 for a total cost of 0.99.",
+          "2 total Flamin Hot Cheetos purchased at a cost of 1.5 for a total cost of 3.",
+          "2 total Coconut Water purchased at a cost of 3.25 for a total cost of 6.5.",
+          "Before taxes and fees: $10.49",
+          "After taxes and fees: $11.407874999999999"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Adri",
+      "email": "adri@test.com",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "itemId": 1,
+          "quantity": 2
+        }
+      ],
+      "total": 3.7844999999999995,
+      "createdAt": "Date: 7/1/2022 Time: 17:17:41",
+      "receipt": {
+        "userInfo": {
+          "name": "Adri",
+          "email": "adri@test.com"
+        },
+        "lines": [
+          "Receipt for Adri available with email adri@test.com",
+          "1 total Flamin Hot Cheetos purchased at a cost of  $1.50 for a total cost of $1.50.",
+          "2 total Rice Krispies purchased at a cost of  $0.99 for a total cost of $1.98.",
+          "Before taxes and fees: $3.48",
+          "After taxes and fees: $3.78"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Adri2",
+      "email": "Adri2@gmail.com",
+      "order": [
+        {
+          "itemId": 3,
+          "quantity": 1
+        },
+        {
+          "itemId": 4,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "total": "9.49",
+      "createdAt": "Date: 7/1/2022 Time: 17:20:46",
+      "receipt": {
+        "userInfo": {
+          "name": "Adri2",
+          "email": "Adri2@gmail.com"
+        },
+        "lines": [
+          "Receipt for Adri2 available with email Adri2@gmail.com",
+          "1 total Cinnamon Rolls purchased at a cost of  $2.99 for a total cost of $2.99.",
+          "1 total Coconut Water purchased at a cost of  $3.25 for a total cost of $3.25.",
+          "1 total Flamin Hot Cheetos purchased at a cost of  $1.50 for a total cost of $1.50.",
+          "1 total Rice Krispies purchased at a cost of  $0.99 for a total cost of $0.99.",
+          "Before taxes and fees: $8.73",
+          "After taxes and fees: $9.49"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "adriana",
+      "email": "adriana",
+      "order": [
+        {
+          "itemId": 3,
+          "quantity": 1
+        },
+        {
+          "itemId": 4,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "total": "9.49",
+      "createdAt": "Date: 7/1/2022 Time: 17:23:30",
+      "receipt": {
+        "userInfo": {
+          "name": "adriana",
+          "email": "adriana"
+        },
+        "lines": [
+          "Receipt for adriana available with email adriana",
+          "1 total Cinnamon Rolls purchased at a cost of  $2.99 for a total cost of $2.99.",
+          "1 total Coconut Water purchased at a cost of  $3.25 for a total cost of $3.25.",
+          "1 total Flamin Hot Cheetos purchased at a cost of  $1.50 for a total cost of $1.50.",
+          "1 total Rice Krispies purchased at a cost of  $0.99 for a total cost of $0.99.",
+          "Before taxes and fees: $8.73",
+          "After taxes and fees: $9.49"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Test",
+      "email": "Test@gmail.com",
+      "order": [
+        {
+          "itemId": 7,
+          "quantity": 2
+        },
+        {
+          "itemId": 4,
+          "quantity": 1
+        },
+        {
+          "itemId": 3,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": "19.27",
+      "createdAt": "Date: 7/1/2022 Time: 17:31:26",
+      "receipt": {
+        "userInfo": {
+          "name": "Test",
+          "email": "Test@gmail.com"
+        },
+        "lines": [
+          "Receipt for Test available with email Test@gmail.com",
+          "2 total Striped Socks purchased at a cost of  $4.99 for a total cost of $9.98.",
+          "1 total Coconut Water purchased at a cost of  $3.25 for a total cost of $3.25.",
+          "1 total Cinnamon Rolls purchased at a cost of  $2.99 for a total cost of $2.99.",
+          "1 total Flamin Hot Cheetos purchased at a cost of  $1.50 for a total cost of $1.50.",
+          "Before taxes and fees: $17.72",
+          "After taxes and fees: $19.27"
+        ]
+      }
+    }
+  ]
 }

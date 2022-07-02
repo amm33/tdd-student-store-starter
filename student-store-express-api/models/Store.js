@@ -2,6 +2,13 @@ const { storage } = require("../data/storage");
 const { BadRequestError } = require("../utils/errors");
 
 class Store {
+  //function to get products
+  static getProducts() {
+    const products = storage.get("products").value();
+
+    return products;
+  }
+
   //function to get a product based on id
   static getProductsWithId(id) {
     const prod = storage
@@ -49,13 +56,76 @@ class Store {
     return subtot;
   }
 
+  //date info
+  static createDate() {
+    var current = new Date();
+    var year = current.getFullYear();
+    var month = current.getMonth() + 1;
+    var day = current.getDate();
+    var hours = current.getHours();
+    var minutes = current.getMinutes();
+    var seconds = current.getSeconds();
+    var date =
+      "Date: " +
+      month +
+      "/" +
+      day +
+      "/" +
+      year +
+      " Time: " +
+      hours +
+      ":" +
+      minutes +
+      ":" +
+      seconds;
+    return date;
+  }
+
+  //reciept stuff
+  static createReceipt(cart, user) {
+    var info = {
+      name: user.name,
+      email: user.email,
+    };
+
+    var lines = [
+      "Receipt for " + user.name + " available with email " + user.email,
+    ];
+    cart.forEach((element) => {
+      var item = this.getProductsWithId(element.itemId);
+      var unitPrice = item.price;
+      var elemPrice = unitPrice * element.quantity;
+      var line =
+        element.quantity +
+        " total " +
+        item.name +
+        " purchased at a cost of  $" +
+        unitPrice.toFixed(2) +
+        " for a total cost of $" +
+        elemPrice.toFixed(2) +
+        ".";
+      lines.push(line);
+    });
+    var totalCost = this.totalPrice(cart);
+    var taxcost = totalCost * 1.0875;
+    var subtotal = "Before taxes and fees: $" + totalCost;
+    var total = "After taxes and fees: $" + taxcost.toFixed(2);
+    lines.push(subtotal);
+    lines.push(total);
+
+    var reciept = { userInfo: info, lines: lines };
+    return reciept;
+  }
+
   static purchaseOrder(cart, user) {
     var order = {
       id: this.createAnId(),
       name: user.name,
       email: user.email,
       order: cart,
-      total: this.totalPrice(cart) * 1.0875,
+      total: (this.totalPrice(cart) * 1.0875).toFixed(2),
+      createdAt: this.createDate(),
+      receipt: this.createReceipt(cart, user),
     };
     let currentPurchases = storage.get("purchases");
     currentPurchases.push(order).write();
@@ -63,15 +133,3 @@ class Store {
   }
 }
 module.exports = Store;
-
-// const { storage } = require("../data/storage");
-
-// class Storage {
-//   static getProducts() {
-//     return storage.get("products");
-//   }
-
-//   static getProductById(id) {
-//     return storage.get("products".find({ id: Number(id) })).value();
-//   }
-// }
